@@ -1,0 +1,118 @@
+@import "./styles/base";
+@import "./styles/fonts";
+
+
+// ID
+#about, #cv, #contact {
+    display: none;
+}
+#portfolio {
+    display:block;
+}
+
+#navigation {
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 170px;
+	height: 100%;
+	background: #2B2934;
+	display: flex;
+    justify-content: space-between;
+    padding: 5% 0;
+}
+
+#navigation ul {
+    padding-right: 0;
+}
+
+#navigation li {
+    //display: inline-block;
+    list-style: none;
+    font-size: 2rem;
+    background: #2B2934 ;
+    color: #fff ;
+    //border: 2px solid #01B3C8 ;
+    margin:-1px 0  ;
+}
+
+#navigation li a {
+    display: block ;
+    background: #2B2934 ;
+    color: #fff ;
+    line-height: 1rem ;
+    text-align: center ;
+    text-decoration: none ;
+    padding: 20px 20px ;
+}
+
+#navigation li a:hover, #navigation li a:active {
+    background: #01B3C8 ;
+    color:#2B2934;
+    text-decoration: none ;
+}
+
+#navigation li a:focus {
+    background: white;
+    color: #2B2934;
+    border: none
+}
+
+#design {
+    display:none;
+}
+
+.logo {
+	//display: inline-block;
+    color: #fff;
+    margin: 0 20% 100px auto;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+.lienReseaux {
+    text-align: left;
+    margin-top: 150px;
+    color: white;
+    font-size: 4rem;
+    
+}
+
+// Font
+
+main h2 {
+    font-size: 5rem;
+}
+
+
+//boutons
+
+.boutonBlanc {
+    background-color: white;
+    color: #2b2934;
+}
+
+.boutonBleu button {
+    list-style: none;
+    font-size: 2rem;
+    background: #2B2934 ;
+    color: #fff ;
+    padding: 10px 10px;
+    width: auto;
+    text-align: center;
+    border: none;
+}
+
+.boutonBleu button:hover{
+    background: #01B3C8 ;
+    color:#2B2934;
+    text-decoration: none ;
+    cursor: pointer;
+}
+
+main .boutonBleu {
+    margin-bottom: 10px;
+} 
