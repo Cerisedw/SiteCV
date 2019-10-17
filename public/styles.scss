@@ -3,10 +3,10 @@
 
 
 // ID
-#about, #cv, #contact {
+#portfolio, #cv, #contact {
     display: none;
 }
-#portfolio {
+#about {
     display:block;
 }
 
@@ -19,7 +19,7 @@
 	background: #2B2934;
 	display: flex;
     justify-content: space-between;
-    padding: 5% 0;
+    padding: 4.5% 0;
 }
 
 #navigation ul {
@@ -65,7 +65,7 @@
 .logo {
 	//display: inline-block;
     color: #fff;
-    margin: 0 20% 100px auto;
+    margin: 0 20% 55px  auto;
 }
 
 .logo img {
@@ -78,13 +78,29 @@
     margin-top: 150px;
     color: white;
     font-size: 4rem;
-    
+    position: absolute;
+    bottom: 13px;
+    left: 44px;
+}
+
+.bloctext {
+    max-width: 750px;
 }
 
 // Font
 
-main h2 {
+main h2, h1 {
     font-size: 5rem;
+    margin-bottom: 39px;
+}
+
+main h3 {
+    font-size: 3rem;
+    color: #01B3C8;
+}
+
+main p {
+    font-size: 1.5rem;
 }
 
 
@@ -114,5 +130,5 @@ main h2 {
 }
 
 main .boutonBleu {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 } 
