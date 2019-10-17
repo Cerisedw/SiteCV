@@ -26,8 +26,8 @@ function menuBtn(x) {
   const y = $(`#${str}`);
 
   $('header div ul li a').css({
-    backgroundColor: '#2b2934',
-    color: 'white',
+    backgroundColor: '',
+    color: '',
   });
   $('.sectionMain').css({ display: 'none' });
 
@@ -37,8 +37,6 @@ function menuBtn(x) {
   });
   y.css('display', 'block');
 }
-
-const x = $('.sectionMain');
 
 
 btnabout.on('click', (e) => { menuBtn(e); });
