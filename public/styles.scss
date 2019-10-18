@@ -71,6 +71,7 @@
     max-width: 500px;
 }
 
+
 .logo {
 	//display: inline-block;
     color: #fff;
@@ -90,6 +91,11 @@
     position: absolute;
     bottom: 13px;
     left: 26px;
+}
+
+.lienReseaux a {
+    text-decoration: none;
+    color: white;
 }
 
 .bloctext {
@@ -116,6 +122,11 @@ main h3 {
 
 main p {
     font-size: 1.5rem;
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 
