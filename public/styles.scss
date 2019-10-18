@@ -14,7 +14,7 @@
     position: fixed;
 	top: 0;
 	left: 0;
-	max-width: 170px;
+	width: 130px;
 	height: 100%;
 	background: #2B2934;
 	display: flex;
@@ -63,6 +63,14 @@
     display:none;
 }
 
+#portfolio img {
+    max-width: 250px;
+}
+
+#cv img {
+    max-width: 500px;
+}
+
 .logo {
 	//display: inline-block;
     color: #fff;
@@ -81,11 +89,15 @@
     font-size: 4rem;
     position: absolute;
     bottom: 13px;
-    left: 44px;
+    left: 26px;
 }
 
 .bloctext {
     max-width: 750px;
+}
+
+.cv-papier {
+    padding-top: 10px;
 }
 
 // Font

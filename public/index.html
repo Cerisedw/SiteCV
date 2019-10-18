@@ -8,92 +8,112 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
-      <div id="navigation" dir="RTL">
+    <div>
+      <header>
+        <div id="navigation" dir="RTL">
 
-          <ul>
-              <div class="logo"><img src=".\assets\images\logo-bleu.png"></div>
-              <li><a href="#" class='about'>Home</a></li>
-              <li><a href="#" class='cv'>CV</a></li>
-              <li><a href="#" class='portfolio'>Portfolio</a></li>
-              <li><a href="#" class='contact'>Contact</a></li>
-              <div class="lienReseaux">
-                  <span><i class="fab fa-linkedin"></i></span>
-                  <span><i class="fab fa-github-square"></i></span>
+            <ul>
+                <div class="logo"><img src=".\assets\images\logo-bleu.png"></div>
+                <li><a href="#" class='about'>Home</a></li>
+                <li><a href="#" class='cv'>CV</a></li>
+                <li><a href="#" class='portfolio'>Portfolio</a></li>
+                <li><a href="#" class='contact'>Contact</a></li>
+                <div class="lienReseaux">
+                    <span><i class="fab fa-linkedin"></i></span>
+                    <span><i class="fab fa-github-square"></i></span>
+                </div>
+            </ul>
+        </div>
+          
+    
+      </header>
+      <main>
+        <div class='container'>
+          <div id="portfolio" class='sectionMain container'>
+            <h2>Mon Portfolio</h2>
+            <div class="bouton">
+              <button id="btn-portfolio">Programmation</button>
+            </div>
+            <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+                <div id="design" class="grid-item"> 
+                  <img src=".\assets\images\02.jpg"> 
+                  <img src=".\assets\images\03.jpg"> 
+                  <img src=".\assets\images\05.jpg"> 
+                  <img src=".\assets\images\04.jpg"> 
+                  <img src=".\assets\images\02.jpg"> 
+                  <img src=".\assets\images\03.jpg"> 
+                  <img src=".\assets\images\05.jpg"> 
+                  <img src=".\assets\images\04.jpg"> 
+                  <img src=".\assets\images\02.jpg"> 
+                  <img src=".\assets\images\03.jpg"> 
+                  <img src=".\assets\images\05.jpg"> 
+                  <img src=".\assets\images\04.jpg"> 
+                  <img src=".\assets\images\02.jpg"> 
+                  <img src=".\assets\images\03.jpg"> 
+                  <img src=".\assets\images\05.jpg"> 
+                  <img src=".\assets\images\04.jpg"> 
+                </div>
+                <div id="programmation" class="grid-item">
+                    <img src=".\assets\images\alicia.jpg"> 
+                    <img src=".\assets\images\2272015365_0dd136bea7_o.jpg">
+                </div>
               </div>
-          </ul>
-      </div>
-        
-   
-    </header>
-    <main>
-      <div id="portfolio" class='sectionMain'>
-        <h2>Mon Portfolio</h2>
-        <div class="bouton">
-          <button id="btn-portfolio">Programmation</button>
-        </div>
-        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
-            <div id="design" class="grid-item"> 
-              <img style='max-width: 250px;' src=".\assets\images\02.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\03.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\05.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\04.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\02.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\03.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\05.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\04.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\02.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\03.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\05.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\04.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\02.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\03.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\05.jpg"> 
-              <img style='max-width: 250px;' src=".\assets\images\04.jpg"> 
             </div>
-            <div id="programmation" class="grid-item">
-                <img style='max-width: 250px;' src=".\assets\images\alicia.jpg"> 
-                <img style='max-width: 250px;' src=".\assets\images\2272015365_0dd136bea7_o.jpg">
+
+
+
+
+          <div id="about" class='sectionMain container'>
+            <div class='row'>
+              <h1 class='col-12'>De Wannemaeker Cerise</h1>
             </div>
+            <div class='row'>
+              <div class='bloctext col-12 col-sm-12 col-md-6'>
+                <h3>Something</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                  Magni vel voluptas at aspernatur voluptatibus officiis mollitia temporibus delectus, vero quae rerum quis molestiae perferendis praesentium ducimus. 
+                  Quisquam, facilis? Voluptatum, cum.
+                </p>
+              </div>
+              <div class='bloctext col-12 col-sm-12 col-md-6'>
+                <h3>Something</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                  Magni vel voluptas at aspernatur voluptatibus officiis mollitia temporibus delectus, vero quae rerum quis molestiae perferendis praesentium ducimus. 
+                  Quisquam, facilis? Voluptatum, cum.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div id="cv" class='sectionMain container'>
+            <div class='row'>
+              <h2 class='col-12'>My CV</h2>
+            </div>
+            <div class='row'>
+              <div class='cv-papier col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6'>
+                  <div class="bouton">
+                    <button>Français</button>
+                  </div>        
+                <img src='.\assets\images\cv2-2018.jpg'>
+              </div>
+              <div class='cv-papier col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6'>
+                  <div class="bouton">
+                    <button>Anglais</button>
+                  </div>
+                <img src='.\assets\images\cv2-20182.jpg'>
+              </div>
+            </div>
+          </div>
+          <div id="contact" class='sectionMain container'>
+              <h2>Contact</h2>
           </div>
         </div>
 
-
-
-        <div id="about" class='sectionMain'>
-          <h1>De Wannemaeker <br>Cerise</h1>
-          <div class='bloctext'>
-            <h3>Something</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-              Magni vel voluptas at aspernatur voluptatibus officiis mollitia temporibus delectus, vero quae rerum quis molestiae perferendis praesentium ducimus. 
-              Quisquam, facilis? Voluptatum, cum.
-            </p>
-            <h3>Something</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-              Magni vel voluptas at aspernatur voluptatibus officiis mollitia temporibus delectus, vero quae rerum quis molestiae perferendis praesentium ducimus. 
-              Quisquam, facilis? Voluptatum, cum.
-            </p>
-            <h3>Something</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-              Magni vel voluptas at aspernatur voluptatibus officiis mollitia temporibus delectus, vero quae rerum quis molestiae perferendis praesentium ducimus. 
-              Quisquam, facilis? Voluptatum, cum.
-            </p>
-          </div>
-        </div>
-
-
-
-        <div id="cv" class='sectionMain'>
-            <h2>My CV</h2>
-        </div>
-
-        <div id="contact" class='sectionMain'>
-            <h2>Contact</h2>
-        </div>
-    </main>
-
+      </main>
+    </div>
   </body>
 </html>
