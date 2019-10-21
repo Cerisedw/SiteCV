@@ -71,6 +71,21 @@
     max-width: 500px;
 }
 
+/*#contact form {
+    background-color: #2b2934; 
+    padding: 20px; 
+    color: white;
+    button {
+        color: white;
+    }
+    button:hover {
+        color: #2b2934;
+        background-color: #01B3C8;
+    }
+    label {
+        font-weight: bold;
+    }
+}*/
 
 .logo {
 	//display: inline-block;
@@ -105,6 +120,10 @@
 
 .cv-papier {
     padding-top: 10px;
+}
+
+form button {
+    margin-top: 20px;
 }
 
 // Font
