@@ -25,6 +25,10 @@ const btnlogo = $('div.logo');
 
 function logoBtn() {
   const y = $('#about');
+  $('header div ul li a').css({
+    backgroundColor: '',
+    color: '',
+  });
   $('.sectionMain').css({ display: 'none' });
   y.css('display', 'block');
 }
@@ -52,3 +56,24 @@ btnlogo.on('click', () => { logoBtn(); });
 btncontact.on('click', (e) => { menuBtn(e); });
 btnportfolio.on('click', (e) => { menuBtn(e); });
 btncv.on('click', (e) => { menuBtn(e); });
+
+
+// portfolio img
+
+const arrImg = {
+  design: ['.\\assets\\images\\03.jpg', '.\\assets\\images\\05.jpg', '.\\assets\\images\\04.jpg', '.\\assets\\images\\02.jpg'],
+  programmation: ['.\\assets\\images\\alicia.jpg', '.\\assets\\images\\2272015365_0dd136bea7_o.jpg'],
+};
+
+function getSrcImg(objImg) {
+  for (const el of objImg.design) {
+    $('#design').append(`<img src ="${el}">`);
+  }
+  for (const el of objImg.programmation) {
+    $('#programmation').append(`<img src ="${el}">`);
+  }
+}
+
+for (let i = 0; i < 5; i++) {
+  getSrcImg(arrImg);
+}
