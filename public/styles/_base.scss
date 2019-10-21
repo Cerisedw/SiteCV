@@ -24,3 +24,9 @@ main {
   padding-top: 65px;
   color: #2B2934;
 }
+
+@media (max-width: 575px) {
+  main {
+    padding-left: 0;
+  }
+}
