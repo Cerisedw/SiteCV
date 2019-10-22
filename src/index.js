@@ -1,25 +1,11 @@
 import $ from 'jquery';
 
-const btn = $('#btn-portfolio');
-btn.on('click', () => {
-  const d = $('#design');
-  const p = $('#programmation');
-  if (d.css('display') === 'block') {
-    d.css({ display: 'none' });
-    p.css({ display: 'block' });
-    $('#portfolio h3').text('Programmation');
-  } else {
-    d.css({ display: 'block' });
-    p.css({ display: 'none' });
-    $('#portfolio h3').text('Design');
-  }
-});
 
 // btn menu
-const btnportfolio = $('a.portfolio');
-const btncv = $('a.cv');
-const btncontact = $('a.contact');
-const btnlogo = $('div.logo');
+const btnportfolio = $('#navigation a.portfolio');
+const btncv = $('#navigation a.cv');
+const btncontact = $('#navigation a.contact');
+const btnlogo = $('#navigation div.logo');
 
 // logo home
 
@@ -58,6 +44,23 @@ btnportfolio.on('click', (e) => { menuBtn(e); });
 btncv.on('click', (e) => { menuBtn(e); });
 
 
+// portfolio bouton
+const btn = $('#btn-portfolio');
+btn.on('click', () => {
+  const d = $('#design');
+  const p = $('#programmation');
+  if (d.css('display') === 'block') {
+    d.css({ display: 'none' });
+    p.css({ display: 'block' });
+    $('#portfolio h3').text('Programmation');
+  } else {
+    d.css({ display: 'block' });
+    p.css({ display: 'none' });
+    $('#portfolio h3').text('Design');
+  }
+});
+
+
 // portfolio img
 
 const arrImg = {
@@ -77,3 +80,41 @@ function getSrcImg(objImg) {
 for (let i = 0; i < 5; i++) {
   getSrcImg(arrImg);
 }
+
+
+// btn dropdown
+
+const btnDrop = $('#btnDropdown');
+btnDrop.on('click', () => {
+  $('.drop').slideToggle('slow');
+});
+
+
+// menu dropdown
+
+const btnDropportfolio = $('.drop a.portfolio');
+const btnDropcv = $('.drop a.cv');
+const btnDropcontact = $('.drop a.contact');
+const btnDroplogo = $('.drop div.logo');
+
+
+function dropMenuBtn(x) {
+  const str = x.target.attributes.class.nodeValue;
+  const y = $(`#${str}`);
+  $('.sectionMain').css({ display: 'none' });
+  y.css('display', 'block');
+  $('.drop').slideToggle('slow');
+}
+
+function dropLogoBtn() {
+  const y = $('#about');
+  $('.sectionMain').css({ display: 'none' });
+  y.css('display', 'block');
+  $('.drop').slideToggle('slow');
+}
+
+
+btnDroplogo.on('click', () => { dropLogoBtn(); });
+btnDropcontact.on('click', (e) => { dropMenuBtn(e); });
+btnDropportfolio.on('click', (e) => { dropMenuBtn(e); });
+btnDropcv.on('click', (e) => { dropMenuBtn(e); });

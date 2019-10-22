@@ -10,9 +10,7 @@
     display:block;
 }
 #burger {
-    position: fixed;
-    top:0;
-    left:0;
+    z-index:2;
 }
 
 #navigation {
@@ -92,6 +90,38 @@
     }
 }*/
 
+.drop{
+    display: none;
+    background-color:#2B2934;
+    color: white;
+    text-align: center ;
+    text-decoration: none ;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    ul {
+        padding-left: 0;
+        line-height: 2rem ;
+        .logo {
+            margin: 5px;
+        }
+    }
+    li {
+        list-style: none;
+        text-decoration: none ;
+
+        a {
+            display: block ;
+            background: #2B2934 ;
+            color: #fff ;
+            text-decoration: none ;
+            padding: 20px 20px ;
+        }
+    }
+
+}
+
+
 .logo {
 	//display: inline-block;
     color: #fff;
@@ -117,6 +147,16 @@
 .lienReseaux a {
     text-decoration: none;
     color: white;
+}
+
+.lienReseauxDrop {
+    color: white;
+    font-size: 4rem;
+    padding: 10px;
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .bloctext {
