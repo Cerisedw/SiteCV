@@ -70,8 +70,15 @@
     max-width: 250px;
 }
 
+
 #cv img {
     max-width: 500px;
+}
+
+@media (max-width: 575px) {
+    #cv img {
+        max-width: 300px;
+    }
 }
 
 /*#contact form {
@@ -179,10 +186,26 @@ main h2, h1 {
     font-weight: bold;
 }
 
+@media (max-width: 575px) {
+    main h2, h1 {
+        font-size: 4rem;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+}
+
 main h3 {
     font-size: 3rem;
     color: #01B3C8;
     font-weight: bold;
+}
+
+@media (max-width: 575px) {
+    main h3 {
+        font-size: 2.5rem;
+        color: #01B3C8;
+        font-weight: bold;
+    }
 }
 
 main p {
