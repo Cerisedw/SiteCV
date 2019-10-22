@@ -16,6 +16,7 @@ function logoBtn() {
     color: '',
   });
   $('.sectionMain').css({ display: 'none' });
+  $('#workInfo').css({ display: 'none' });
   y.css('display', 'block');
 }
 
@@ -29,6 +30,7 @@ function menuBtn(x) {
     color: '',
   });
   $('.sectionMain').css({ display: 'none' });
+  $('#workInfo').css({ display: 'none' });
 
   $(x.target).css({
     backgroundColor: 'white',
@@ -60,7 +62,7 @@ btn.on('click', () => {
   }
 });
 
-// portfolio creation du contenu des projets
+// portfolio creation du contenu des projets (si ils sont sous forme obj JS)
 function createProjectContent(img) {
   const work = $('.workContent');
   work.empty();
@@ -75,9 +77,9 @@ function createProjectContent(img) {
 // portfolio img
 
 const arrImg = {
-  design: [{ lien: '.\\assets\\images\\03.jpg', nom: '03' }, { lien: '.\\assets\\images\\05.jpg', nom: '05' },
-    { lien: '.\\assets\\images\\04.jpg', nom: '04' }, { lien: '.\\assets\\images\\02.jpg', nom: '02' }],
-  programmation: [{ lien: '.\\assets\\images\\alicia.jpg', nom: 'Alicia' }, { lien: '.\\assets\\images\\2272015365_0dd136bea7_o.jpg', nom: 'Something' }],
+  design: [{ lien: '.\\assets\\images\\03.jpg', nom: 'Monsieur' }, { lien: '.\\assets\\images\\05.jpg', nom: 'Madame' },
+    { lien: '.\\assets\\images\\04.jpg', nom: 'Araignée' }, { lien: '.\\assets\\images\\02.jpg', nom: 'Bateau' }],
+  programmation: [{ lien: '.\\assets\\images\\alicia.jpg', nom: 'Alicia' }, { lien: '.\\assets\\images\\2272015365_0dd136bea7_o.jpg', nom: 'Lunette' }],
 };
 
 function getSrcImg(objImg) {
@@ -100,7 +102,7 @@ for (const img of works) {
   console.log(imgObj);
   $(img).on('click', () => {
     $('.sectionMain').css({ display: 'none' });
-    $('#workInfo').css('display', 'block');
+    $('#workInfo').css({ display: 'block' });
     createProjectContent(imgObj);
   });
 }
@@ -135,6 +137,7 @@ function dropMenuBtn(x) {
   const str = x.target.attributes.class.nodeValue;
   const y = $(`#${str}`);
   $('.sectionMain').css({ display: 'none' });
+  $('#workInfo').css({ display: 'none' });
   y.css('display', 'block');
   $('.drop').slideToggle('slow');
 }
@@ -142,6 +145,7 @@ function dropMenuBtn(x) {
 function dropLogoBtn() {
   const y = $('#about');
   $('.sectionMain').css({ display: 'none' });
+  $('#workInfo').css({ display: 'none' });
   y.css('display', 'block');
   $('.drop').slideToggle('slow');
 }
