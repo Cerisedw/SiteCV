@@ -60,26 +60,59 @@ btn.on('click', () => {
   }
 });
 
+// portfolio creation du contenu des projets
+function createProjectContent(img) {
+  const work = $('.workContent');
+  work.empty();
+  work.append(`<h2>${img.nom}</h2>`);
+  work.append(`<img src='${img.lien}'>`);
+  work.append('<h3>Technologies utilisées</h3>');
+  work.append('<p>something</p>');
+  work.append('<h3>Descritpions</h3>');
+  work.append('<p>something</p>');
+}
 
 // portfolio img
 
 const arrImg = {
-  design: ['.\\assets\\images\\03.jpg', '.\\assets\\images\\05.jpg', '.\\assets\\images\\04.jpg', '.\\assets\\images\\02.jpg'],
-  programmation: ['.\\assets\\images\\alicia.jpg', '.\\assets\\images\\2272015365_0dd136bea7_o.jpg'],
+  design: [{ lien: '.\\assets\\images\\03.jpg', nom: '03' }, { lien: '.\\assets\\images\\05.jpg', nom: '05' },
+    { lien: '.\\assets\\images\\04.jpg', nom: '04' }, { lien: '.\\assets\\images\\02.jpg', nom: '02' }],
+  programmation: [{ lien: '.\\assets\\images\\alicia.jpg', nom: 'Alicia' }, { lien: '.\\assets\\images\\2272015365_0dd136bea7_o.jpg', nom: 'Something' }],
 };
 
 function getSrcImg(objImg) {
   for (const el of objImg.design) {
-    $('#design').append(`<img src ="${el}">`);
+    $('#design').append(`<img class="${el.nom}" src ="${el.lien}">`);
   }
   for (const el of objImg.programmation) {
-    $('#programmation').append(`<img src ="${el}">`);
+    $('#programmation').append(`<img class="${el.nom}" src ="${el.lien}">`);
   }
 }
 
-for (let i = 0; i < 5; i++) {
+
+for (let i = 0; i < 1; i++) {
   getSrcImg(arrImg);
 }
+const works = $('#portfolio img');
+
+for (const img of works) {
+  const imgObj = { lien: $(img)[0].attributes.src.nodeValue, nom: $(img)[0].attributes.class.nodeValue };
+  console.log(imgObj);
+  $(img).on('click', () => {
+    $('.sectionMain').css({ display: 'none' });
+    $('#workInfo').css('display', 'block');
+    createProjectContent(imgObj);
+  });
+}
+
+
+// bouton return
+
+const btnReturn = $('.return');
+btnReturn.on('click', () => {
+  $('#portfolio').css({ display: 'block' });
+  $('#workInfo').css({ display: 'none' });
+});
 
 
 // btn dropdown
