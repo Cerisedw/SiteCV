@@ -3,6 +3,7 @@ import { change } from './func/portfolioBtn';
 import { logobtn, menubtn } from './func/menuBtn';
 import { logoDropdownBtn, menuDropdownBtn } from './func/menuDropdownBtn';
 import { arrImg } from './data/data';
+import { getSrcImg, createProjectContent } from './func/portfolioCreaC';
 
 // btn menu
 const btnportfolio = $('#navigation a.portfolio');
@@ -20,32 +21,8 @@ btncv.on('click', (e) => { menubtn(e); });
 const btn = $('#btn-portfolio');
 btn.on('click', change);
 
-
-// portfolio creation du contenu des projets (si ils sont sous forme obj JS)
-function createProjectContent(img) {
-  const work = $('.workContent');
-  work.empty();
-  work.append(`<h2>${img.nom}</h2>`);
-  work.append(`<img src='${img.lien}'>`);
-  work.append('<h3>Technologies utilisées</h3>');
-  work.append('<p>something</p>');
-  work.append('<h3>Descritpions</h3>');
-  work.append('<p>something</p>');
-}
-
-// portfolio img
-
-
-function getSrcImg(objImg) {
-  for (const el of objImg.design) {
-    $('#design').append(`<img class="${el.nom}" src ="${el.lien}">`);
-  }
-  for (const el of objImg.programmation) {
-    $('#programmation').append(`<img class="${el.nom}" src ="${el.lien}">`);
-  }
-}
-
-for (let i = 0; i < 1; i++) {
+// portfolio gallerie
+for (let i = 0; i < 2; i++) {
   getSrcImg(arrImg);
 }
 
@@ -58,6 +35,7 @@ for (const img of works) {
   $(img).on('click', () => {
     $('.sectionMain').css({ display: 'none' });
     $('#workInfo').css({ display: 'block' });
+
     // createProjectContent(result);
   });
 }
