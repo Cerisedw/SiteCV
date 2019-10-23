@@ -1,5 +1,7 @@
 import $ from 'jquery';
-
+import { change } from './portfolioBtn';
+import { logobtn, menubtn } from './menuBtn';
+import { logoDropdownBtn, menuDropdownBtn } from './menuDropdownBtn';
 
 // btn menu
 const btnportfolio = $('#navigation a.portfolio');
@@ -7,60 +9,16 @@ const btncv = $('#navigation a.cv');
 const btncontact = $('#navigation a.contact');
 const btnlogo = $('#navigation div.logo');
 
-// logo home
-
-function logoBtn() {
-  const y = $('#about');
-  $('header div ul li a').css({
-    backgroundColor: '',
-    color: '',
-  });
-  $('.sectionMain').css({ display: 'none' });
-  $('#workInfo').css({ display: 'none' });
-  y.css('display', 'block');
-}
-
-// btn menu bloc
-function menuBtn(x) {
-  const str = x.target.attributes.class.nodeValue;
-  const y = $(`#${str}`);
-
-  $('header div ul li a').css({
-    backgroundColor: '',
-    color: '',
-  });
-  $('.sectionMain').css({ display: 'none' });
-  $('#workInfo').css({ display: 'none' });
-
-  $(x.target).css({
-    backgroundColor: 'white',
-    color: '#2b2934',
-  });
-  y.css('display', 'block');
-}
-
-
-btnlogo.on('click', () => { logoBtn(); });
-btncontact.on('click', (e) => { menuBtn(e); });
-btnportfolio.on('click', (e) => { menuBtn(e); });
-btncv.on('click', (e) => { menuBtn(e); });
+btnlogo.on('click', () => { logobtn(); });
+btncontact.on('click', (e) => { menubtn(e); });
+btnportfolio.on('click', (e) => { menubtn(e); });
+btncv.on('click', (e) => { menubtn(e); });
 
 
 // portfolio bouton
 const btn = $('#btn-portfolio');
-btn.on('click', () => {
-  const d = $('#design');
-  const p = $('#programmation');
-  if (d.css('display') === 'block') {
-    d.css({ display: 'none' });
-    p.css({ display: 'block' });
-    $('#portfolio h3').text('Programmation');
-  } else {
-    d.css({ display: 'block' });
-    p.css({ display: 'none' });
-    $('#portfolio h3').text('Design');
-  }
-});
+btn.on('click', change);
+
 
 // portfolio creation du contenu des projets (si ils sont sous forme obj JS)
 function createProjectContent(img) {
@@ -77,9 +35,16 @@ function createProjectContent(img) {
 // portfolio img
 
 const arrImg = {
-  design: [{ lien: '.\\assets\\images\\03.jpg', nom: 'Monsieur' }, { lien: '.\\assets\\images\\05.jpg', nom: 'Madame' },
-    { lien: '.\\assets\\images\\04.jpg', nom: 'Araignée' }, { lien: '.\\assets\\images\\02.jpg', nom: 'Bateau' }],
-  programmation: [{ lien: '.\\assets\\images\\alicia.jpg', nom: 'Alicia' }, { lien: '.\\assets\\images\\2272015365_0dd136bea7_o.jpg', nom: 'Lunette' }],
+  design: [
+    { lien: '.\\assets\\images\\03.jpg', nom: 'Monsieur' },
+    { lien: '.\\assets\\images\\05.jpg', nom: 'Madame' },
+    { lien: '.\\assets\\images\\04.jpg', nom: 'Araignée' },
+    { lien: '.\\assets\\images\\02.jpg', nom: 'Bateau' },
+  ],
+  programmation: [
+    { lien: '.\\assets\\images\\alicia.jpg', nom: 'Alicia' },
+    { lien: '.\\assets\\images\\2272015365_0dd136bea7_o.jpg', nom: 'Lunette' },
+  ],
 };
 
 function getSrcImg(objImg) {
@@ -95,15 +60,17 @@ function getSrcImg(objImg) {
 for (let i = 0; i < 1; i++) {
   getSrcImg(arrImg);
 }
+
 const works = $('#portfolio img');
 
 for (const img of works) {
-  const imgObj = { lien: $(img)[0].attributes.src.nodeValue, nom: $(img)[0].attributes.class.nodeValue };
-  console.log(imgObj);
+  // const str = $(img)[0].attributes.src.nodeValue;
+
+
   $(img).on('click', () => {
     $('.sectionMain').css({ display: 'none' });
     $('#workInfo').css({ display: 'block' });
-    createProjectContent(imgObj);
+    // createProjectContent(result);
   });
 }
 
@@ -133,25 +100,7 @@ const btnDropcontact = $('.drop a.contact');
 const btnDroplogo = $('.drop div.logo');
 
 
-function dropMenuBtn(x) {
-  const str = x.target.attributes.class.nodeValue;
-  const y = $(`#${str}`);
-  $('.sectionMain').css({ display: 'none' });
-  $('#workInfo').css({ display: 'none' });
-  y.css('display', 'block');
-  $('.drop').slideToggle('slow');
-}
-
-function dropLogoBtn() {
-  const y = $('#about');
-  $('.sectionMain').css({ display: 'none' });
-  $('#workInfo').css({ display: 'none' });
-  y.css('display', 'block');
-  $('.drop').slideToggle('slow');
-}
-
-
-btnDroplogo.on('click', () => { dropLogoBtn(); });
-btnDropcontact.on('click', (e) => { dropMenuBtn(e); });
-btnDropportfolio.on('click', (e) => { dropMenuBtn(e); });
-btnDropcv.on('click', (e) => { dropMenuBtn(e); });
+btnDroplogo.on('click', () => { logoDropdownBtn(); });
+btnDropcontact.on('click', (e) => { menuDropdownBtn(e); });
+btnDropportfolio.on('click', (e) => { menuDropdownBtn(e); });
+btnDropcv.on('click', (e) => { menuDropdownBtn(e); });
