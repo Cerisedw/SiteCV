@@ -1,7 +1,8 @@
 import $ from 'jquery';
-import { change } from './portfolioBtn';
-import { logobtn, menubtn } from './menuBtn';
-import { logoDropdownBtn, menuDropdownBtn } from './menuDropdownBtn';
+import { change } from './func/portfolioBtn';
+import { logobtn, menubtn } from './func/menuBtn';
+import { logoDropdownBtn, menuDropdownBtn } from './func/menuDropdownBtn';
+import { arrImg } from './data/data';
 
 // btn menu
 const btnportfolio = $('#navigation a.portfolio');
@@ -34,18 +35,6 @@ function createProjectContent(img) {
 
 // portfolio img
 
-const arrImg = {
-  design: [
-    { lien: '.\\assets\\images\\03.jpg', nom: 'Monsieur' },
-    { lien: '.\\assets\\images\\05.jpg', nom: 'Madame' },
-    { lien: '.\\assets\\images\\04.jpg', nom: 'Araignée' },
-    { lien: '.\\assets\\images\\02.jpg', nom: 'Bateau' },
-  ],
-  programmation: [
-    { lien: '.\\assets\\images\\alicia.jpg', nom: 'Alicia' },
-    { lien: '.\\assets\\images\\2272015365_0dd136bea7_o.jpg', nom: 'Lunette' },
-  ],
-};
 
 function getSrcImg(objImg) {
   for (const el of objImg.design) {
@@ -55,7 +44,6 @@ function getSrcImg(objImg) {
     $('#programmation').append(`<img class="${el.nom}" src ="${el.lien}">`);
   }
 }
-
 
 for (let i = 0; i < 1; i++) {
   getSrcImg(arrImg);
@@ -83,7 +71,6 @@ btnReturn.on('click', () => {
   $('#workInfo').css({ display: 'none' });
 });
 
-
 // btn dropdown
 
 const btnDrop = $('#btnDropdown');
@@ -91,14 +78,12 @@ btnDrop.on('click', () => {
   $('.drop').slideToggle('slow');
 });
 
-
 // menu dropdown
 
 const btnDropportfolio = $('.drop a.portfolio');
 const btnDropcv = $('.drop a.cv');
 const btnDropcontact = $('.drop a.contact');
 const btnDroplogo = $('.drop div.logo');
-
 
 btnDroplogo.on('click', () => { logoDropdownBtn(); });
 btnDropcontact.on('click', (e) => { menuDropdownBtn(e); });

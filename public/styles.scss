@@ -1,6 +1,6 @@
 @import "./styles/base";
 @import "./styles/fonts";
-
+@import "./styles/button";
 
 // ID
 #portfolio, #cv, #contact {
@@ -225,32 +225,3 @@ label {
     font-weight: bold;
 }
 
-
-//boutons
-
-.boutonBlanc {
-    background-color: white;
-    color: #2b2934;
-}
-
-.bouton button {
-    list-style: none;
-    font-size: 2rem;
-    background: #2B2934 ;
-    color: #fff ;
-    padding: 10px 10px;
-    width: auto;
-    text-align: center;
-    border: none;
-}
-
-.bouton button:hover{
-    background: #01B3C8 ;
-    color:#2B2934;
-    text-decoration: none ;
-    cursor: pointer;
-}
-
-main .bouton {
-    margin-bottom: 13px;
-} 
