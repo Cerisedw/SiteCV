@@ -23,7 +23,11 @@ export const createProjectContent = (img) => {
   work.append(`<h2>${img.nom}</h2>`);
   work.append(`<img src='${img.lien}'>`);
   work.append('<h3>Technologies utilisées</h3>');
-  work.append('<p>something</p>');
+  const ul = $('<ul></ul>');
+  for (const techno of img.techno) {
+    ul.append(`<li>${techno}</li>`);
+  }
+  work.append(ul);
   work.append('<h3>Descritpions</h3>');
   work.append('<p>something</p>');
 };
