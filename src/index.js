@@ -22,9 +22,8 @@ const btn = $('#btn-portfolio');
 btn.on('click', change);
 
 // portfolio gallerie
-for (let i = 0; i < 2; i++) {
-  getSrcImg(arrImg);
-}
+getSrcImg(arrImg);
+
 
 const works = $('#portfolio img');
 
