@@ -3,7 +3,7 @@ import { change } from './func/portfolioBtn';
 import { logobtn, menubtn } from './func/menuBtn';
 import { logoDropdownBtn, menuDropdownBtn } from './func/menuDropdownBtn';
 import { arrImg } from './data/data';
-import { getSrcImg, createProjectContent } from './func/portfolioCreaC';
+import { getSrcImg, createProjectContent, getWork } from './func/portfolioCreaC';
 
 // btn menu
 const btnportfolio = $('#navigation a.portfolio');
@@ -29,15 +29,14 @@ for (let i = 0; i < 2; i++) {
 const works = $('#portfolio img');
 
 for (const img of works) {
-  // const str = $(img)[0].attributes.src.nodeValue;
   // affiche le nom de l'id (design, programmation)
-  console.log($(img).parent()[0].id);
+  // console.log($(img).parent()[0].id);
 
-  $(img).on('click', () => {
+  $(img).on('click', (e) => {
     $('.sectionMain').css({ display: 'none' });
     $('#workInfo').css({ display: 'block' });
 
-    // createProjectContent(result);
+    createProjectContent(getWork(e.target));
   });
 }
 
