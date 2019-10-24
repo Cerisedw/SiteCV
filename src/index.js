@@ -30,7 +30,8 @@ const works = $('#portfolio img');
 
 for (const img of works) {
   // const str = $(img)[0].attributes.src.nodeValue;
-
+  // affiche le nom de l'id (design, programmation)
+  console.log($(img).parent()[0].id);
 
   $(img).on('click', () => {
     $('.sectionMain').css({ display: 'none' });
