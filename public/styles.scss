@@ -69,10 +69,17 @@
     padding-bottom: 15px;
 }
 #portfolio img {
-    height: 200px;
+    max-height: 400px;
+    max-width: 400px;
     cursor: pointer;
 }
 
+@media (max-width: 575px) {
+    #portfolio img {
+        max-height: 250px;
+        max-width: 250px;
+    }
+}
 
 #cv img {
     max-width: 500px;
@@ -197,7 +204,8 @@
         display: inline-block; /* Needed to add space between the bullet and the text */
         width: 1em; /* Also needed for space (tweak if needed) */
         margin-left: -1em; /* Also needed for space (tweak if needed) */
-      }
+    }
+    padding-bottom: 35px;
 }
 
 @media (max-width: 575px) {
