@@ -29,7 +29,7 @@ export const createProjectContent = (img) => {
   }
   work.append(ul);
   work.append('<h3>Descritpions</h3>');
-  work.append('<p>something</p>');
+  work.append(`<p>${img.desc}</p>`);
 };
 
 // portfolio img
