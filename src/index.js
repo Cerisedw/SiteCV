@@ -37,8 +37,8 @@ for (const img of works) {
 
   $(img).on('click', (e) => {
     $('.sectionMain').css({ display: 'none' });
+    $(window).scrollTop();
     $('#workInfo').css({ display: 'block' });
-    console.log(e.target);
     createProjectContent(getWork(e.target));
   });
 }
