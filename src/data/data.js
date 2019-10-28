@@ -33,16 +33,25 @@ export const arrImg = {
   ],
   programmation: [
     {
-      lien: '.\\assets\\images\\alicia.jpg',
-      nom: 'Alicia Honhon',
+      lien: '.\\assets\\images\\travaux\\imgProgCsharp-blanc.jpg',
+      nom: 'Projet C#',
       techno: ['C#', 'Asp.net'],
-      desc: ['Description du projet Alicia'],
+      desc: ['Description du projet C# | Asp.net'],
+      linGit: 'https://github.com/Cerisedw',
     },
     {
-      lien: '.\\assets\\images\\2272015365_0dd136bea7_o.jpg',
-      nom: 'Lunette Garçon',
+      lien: '.\\assets\\images\\travaux\\imgProgJs-blanc.jpg',
+      nom: 'Projet JavaScript',
       techno: ['JavaScript', 'Node.Js'],
-      desc: ['Description du projet Lunette'],
+      desc: ['Description du projet JavaScript | NodeJs'],
+      linGit: 'https://github.com/Cerisedw',
+    },
+    {
+      lien: '.\\assets\\images\\travaux\\imgProgPhP-blanc.jpg',
+      nom: 'Projet PhP',
+      techno: ['PhP', 'Symphony'],
+      desc: ['Description du projet PhP | Symphony'],
+      linGit: 'https://github.com/Cerisedw',
     },
   ],
 };

@@ -10,7 +10,7 @@
     font-size: 2rem;
     background: #2B2934 ;
     color: #fff ;
-    padding: 10px 10px;
+    padding: 10px;
     width: auto;
     text-align: center;
     border: none;
@@ -31,3 +31,19 @@ main .bouton {
     padding: 10px 20px;
 }
 
+.boutonProjet {
+    margin-top: 30px;
+    
+
+    a {
+        text-decoration: none;
+        background: #2B2934 ;
+        color: #fff ;
+        font-size: 1.7rem;
+        padding: 10px;
+    }
+    a:hover {
+        background: #01B3C8 ;
+        color:#2B2934;
+    }
+}

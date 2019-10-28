@@ -73,6 +73,7 @@
     cursor: pointer;
 }
 
+
 @media (max-width: 575px) {
     #portfolio img {
         max-width: 250px;
@@ -188,6 +189,7 @@
 .workContent{
     img {
         max-width:800px;
+        margin-bottom: 25px;
     }
     ul {
         list-style: none;
