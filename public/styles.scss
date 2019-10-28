@@ -69,14 +69,12 @@
     padding-bottom: 15px;
 }
 #portfolio img {
-    max-height: 400px;
     max-width: 400px;
     cursor: pointer;
 }
 
 @media (max-width: 575px) {
     #portfolio img {
-        max-height: 250px;
         max-width: 250px;
     }
 }
@@ -189,7 +187,7 @@
 
 .workContent{
     img {
-        max-width:450px;
+        max-width:800px;
     }
     ul {
         list-style: none;

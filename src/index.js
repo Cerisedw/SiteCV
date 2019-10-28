@@ -4,6 +4,7 @@ import { logobtn, menubtn } from './func/menuBtn';
 import { logoDropdownBtn, menuDropdownBtn } from './func/menuDropdownBtn';
 import { arrImg } from './data/data';
 import { getSrcImg, createProjectContent, getWork } from './func/portfolioCreaC';
+import { hoverPort } from './func/hoverPortfolio';
 
 // btn menu
 const btnportfolio = $('#navigation a.portfolio');
@@ -31,10 +32,13 @@ for (const img of works) {
   // affiche le nom de l'id (design, programmation)
   // console.log($(img).parent()[0].id);
 
+
+  hoverPort($(img));
+
   $(img).on('click', (e) => {
     $('.sectionMain').css({ display: 'none' });
     $('#workInfo').css({ display: 'block' });
-
+    console.log(e.target);
     createProjectContent(getWork(e.target));
   });
 }
