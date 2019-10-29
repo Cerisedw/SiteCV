@@ -34,16 +34,18 @@ export const arrImg = {
   programmation: [
     {
       lien: '.\\assets\\images\\travaux\\imgProgCsharp-blanc.jpg',
-      nom: 'Projet C#',
-      techno: ['C#', 'Asp.net'],
-      desc: ['Description du projet C# | Asp.net'],
-      linGit: 'https://github.com/Cerisedw',
+      nom: 'Heroes VS Monsters',
+      techno: ['C#'],
+      desc: ['Bienvenue dans la forêt de « Shorewood », forêt enchantée du pays de « Stormwall ».',
+        'Dans cette forêt, se livre un combat acharné entre les héros d’une part et les monstres d’autre part.',
+        'Notre rôle est de donner vie à cette forêt au travers d’un programme écrit en console reprenant tous les concepts orientés objets vu au cours.'],
+      linGit: 'https://github.com/Cerisedw/HeroesVsMonsters',
     },
     {
       lien: '.\\assets\\images\\travaux\\imgProgJs-blanc.jpg',
       nom: 'Projet JavaScript',
       techno: ['JavaScript', 'Node.Js'],
-      desc: ['Description du projet JavaScript | NodeJs'],
+      desc: ['Description du projet JavaScript | Node.Js'],
       linGit: 'https://github.com/Cerisedw',
     },
     {
