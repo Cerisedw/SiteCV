@@ -33,8 +33,6 @@ main .bouton {
 
 .boutonProjet {
     margin-top: 30px;
-    
-
     a {
         text-decoration: none;
         background: $primary-color ;
@@ -46,4 +44,9 @@ main .bouton {
         background: $secondary-color ;
         color:$primary-color;
     }
+}
+
+
+form button {
+    margin-top: 20px;
 }

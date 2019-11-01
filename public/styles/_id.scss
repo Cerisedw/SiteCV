@@ -1,0 +1,126 @@
+// ID
+#portfolio, #cv, #contact {
+    display: none;
+}
+#about {
+    display:block;
+}
+#burger {
+    z-index:2;
+}
+
+#navigation {
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 130px;
+	height: 100%;
+	background: $primary-color;
+	display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+#navigation ul {
+    padding-right: 0;
+}
+
+#navigation li {
+    //display: inline-block;
+    list-style: none;
+    font-size: 2rem;
+    background: $primary-color ;
+    color: #fff ;
+    //border: 2px solid $secondary-color ;
+    margin:-1px 0  ;
+}
+
+#navigation li a {
+    display: block ;
+    background: $primary-color ;
+    color: #fff ;
+    line-height: 1rem ;
+    text-align: center ;
+    text-decoration: none ;
+    padding: 20px 20px ;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    transition: all 250ms ease-in-out;
+
+}
+
+#navigation li a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    background: white;
+    transition: all 500ms ease-in-out;
+}
+  
+#navigation li a:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+#navigation li a:hover, #navigation li a:active {
+    background: $secondary-color ;
+    color:$primary-color;
+    text-decoration: none ;
+}
+
+#navigation li a:focus {
+    background: white;
+    color: $primary-color;
+    border: none
+}
+
+#design {
+    display:none;
+}
+#portfolio {
+    padding-bottom: 15px;
+}
+#portfolio img {
+    max-width: 400px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 575px) {
+    #portfolio img {
+        max-width: 250px;
+    }
+}
+
+#cv img {
+    max-width: 500px;
+}
+
+@media (max-width: 575px) {
+    #cv img {
+        max-width: 300px;
+    }
+}
+
+
+/*#contact form {
+    background-color: $primary-color; 
+    padding: 20px; 
+    color: white;
+    button {
+        color: white;
+    }
+    button:hover {
+        color: $primary-color;
+        background-color: $secondary-color;
+    }
+    label {
+        font-weight: bold;
+    }
+}*/
