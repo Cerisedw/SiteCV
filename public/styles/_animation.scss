@@ -1,0 +1,29 @@
+#navigation li a {
+    display: block;
+    background: $primary-color;
+    position: relative;
+    z-index: 0;
+    transition: all 250ms ease-in-out;
+  }
+  
+  #navigation li a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    background: white;
+    transition: all 500ms ease-in-out;
+  }
+  
+  #navigation li a:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .active {
+    background: white;
+  }
+  

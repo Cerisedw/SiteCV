@@ -2,13 +2,13 @@
 
 .boutonBlanc {
     background-color: white;
-    color: #2b2934;
+    color: $primary-color;
 }
 
 .bouton button {
     list-style: none;
     font-size: 2rem;
-    background: #2B2934 ;
+    background: $primary-color ;
     color: #fff ;
     padding: 10px;
     width: auto;
@@ -17,8 +17,8 @@
 }
 
 .bouton button:hover{
-    background: #01B3C8 ;
-    color:#2B2934;
+    background: $secondary-color ;
+    color:$primary-color;
     text-decoration: none ;
     cursor: pointer;
 }
@@ -37,13 +37,13 @@ main .bouton {
 
     a {
         text-decoration: none;
-        background: #2B2934 ;
+        background: $primary-color ;
         color: #fff ;
         font-size: 1.7rem;
         padding: 10px;
     }
     a:hover {
-        background: #01B3C8 ;
-        color:#2B2934;
+        background: $secondary-color ;
+        color:$primary-color;
     }
 }

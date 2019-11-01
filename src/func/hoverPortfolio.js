@@ -7,7 +7,14 @@ export const hoverPort = (img) => {
           console.log(e.target);
           const toto = $(`<p>${$(e.target)[0].attributes.title.nodeValue}</p>`);
           toto.css({
-            position: 'absolute', backgroundColor: '#2B2934', color: '#01B3C8', fontWeight: 'bold', fontSize: '1.8rem', padding: '10px', textAlign: 'center', maxWidth: '250px',
+            position: 'absolute',
+            backgroundColor: '#2B2934',
+            color: '#01B3C8',
+            fontWeight: 'bold',
+            fontSize: '1.8rem',
+            padding: '10px',
+            textAlign: 'center',
+            width: '100%',
           });
           toto.prependTo($(e.target).parent());
         },

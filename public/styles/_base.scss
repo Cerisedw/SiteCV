@@ -16,13 +16,13 @@ body {
 }
 
 header {
-  background-color: #2B2934;
+  background-color: $primary-color;
 }
 
 main {
   padding-left:110px;
   padding-top: 65px;
-  color: #2B2934;
+  color: $primary-color;
   z-index: 1;
 
 }

@@ -1,0 +1,259 @@
+// ID
+#portfolio, #cv, #contact {
+    display: none;
+}
+#about {
+    display:block;
+}
+#burger {
+    z-index:2;
+}
+
+#navigation {
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 130px;
+	height: 100%;
+	background: $primary-color;
+	display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+#navigation ul {
+    padding-right: 0;
+}
+
+#navigation li {
+    //display: inline-block;
+    list-style: none;
+    font-size: 2rem;
+    background: $primary-color ;
+    color: #fff ;
+    //border: 2px solid $secondary-color ;
+    margin:-1px 0  ;
+}
+
+#navigation li a {
+    display: block ;
+    background: $primary-color ;
+    color: #fff ;
+    line-height: 1rem ;
+    text-align: center ;
+    text-decoration: none ;
+    padding: 20px 20px ;
+    font-weight: bold;
+}
+
+#navigation li a:hover, #navigation li a:active {
+    background: $secondary-color ;
+    color:$primary-color;
+    text-decoration: none ;
+}
+
+#navigation li a:focus {
+    background: white;
+    color: $primary-color;
+    border: none
+}
+
+#design {
+    display:none;
+}
+#portfolio {
+    padding-bottom: 15px;
+}
+#portfolio img {
+    max-width: 400px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 575px) {
+    #portfolio img {
+        max-width: 250px;
+    }
+}
+
+#cv img {
+    max-width: 500px;
+}
+
+@media (max-width: 575px) {
+    #cv img {
+        max-width: 300px;
+    }
+}
+
+/*#contact form {
+    background-color: $primary-color; 
+    padding: 20px; 
+    color: white;
+    button {
+        color: white;
+    }
+    button:hover {
+        color: $primary-color;
+        background-color: $secondary-color;
+    }
+    label {
+        font-weight: bold;
+    }
+}*/
+
+// classe
+
+.grid-item {
+    position: relative;
+}
+
+.drop{
+    display: none;
+    background-color:$primary-color;
+    color: white;
+    text-align: center ;
+    text-decoration: none ;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    ul {
+        padding-left: 0;
+        line-height: 2rem ;
+        .logo {
+            margin: 5px;
+        }
+    }
+    li {
+        list-style: none;
+        text-decoration: none ;
+
+        a {
+            display: block ;
+            background: $primary-color ;
+            color: #fff ;
+            text-decoration: none ;
+            padding: 20px 20px ;
+        }
+    }
+}
+
+
+.logo {
+	//display: inline-block;
+    color: #fff;
+    margin: 0 0 55px  auto;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+.lienReseaux {
+    color: white;
+    font-size: 4rem;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.lienReseaux a {
+    text-decoration: none;
+    color: white;
+}
+
+.lienReseauxDrop {
+    color: white;
+    font-size: 4rem;
+    padding: 10px;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.bloctext {
+    max-width: 750px;
+}
+
+.cv-papier {
+    padding-top: 10px;
+}
+
+.workContent{
+    img {
+        max-width:800px;
+        margin-bottom: 25px;
+    }
+    ul {
+        list-style: none;
+    }
+    ul li {
+        font-size: 1.7rem;
+    }
+    ul li::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: $secondary-color; /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+    padding-bottom: 35px;
+}
+
+@media (max-width: 575px) {
+    .workContent img {
+        max-width: 250px;
+    }
+}
+
+
+form button {
+    margin-top: 20px;
+}
+
+// Font
+
+main h2, h1 {
+    font-size: 5rem;
+    margin-bottom: 39px;
+    font-weight: bold;
+}
+
+@media (max-width: 575px) {
+    main h2, h1 {
+        font-size: 4rem;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+}
+
+main h3 {
+    font-size: 3rem;
+    color: $secondary-color;
+    font-weight: bold;
+}
+
+@media (max-width: 575px) {
+    main h3 {
+        font-size: 2.5rem;
+        color: $secondary-color;
+        font-weight: bold;
+    }
+}
+
+main p {
+    font-size: 1.5rem;
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
