@@ -7,12 +7,6 @@ export const arrImg = {
       desc: ['Flyers A5 proposé pour le projet Brigths.', 'Il s\'agit de la première page d\'un flyers A5.'],
     },
     {
-      lien: '.\\assets\\images\\travaux\\70_20170317_uitnodiging Manu_US_72.jpg',
-      nom: 'Carte format US',
-      techno: ['InDesign', 'Illustrator'],
-      desc: ['Carte format US réalisée sur InDesign (layout) et Illustrator (le 21).'],
-    },
-    {
       lien: '.\\assets\\images\\travaux\\CapitalDigital.png',
       nom: 'Affiche Capital Digital',
       techno: ['InDesign', 'Illustrator'],
@@ -29,6 +23,12 @@ export const arrImg = {
       nom: 'Logo S&S',
       techno: ['Illustrator'],
       desc: ['Proposition d\'un logo pour le théatre S&S', 'Théatre ayant pour but de réunir les entendants et non entendants lors de pièce de théatre adaptée à tous.'],
+    },
+    {
+      lien: '.\\assets\\images\\travaux\\70_20170317_uitnodiging Manu_US_72.jpg',
+      nom: 'Carte format US',
+      techno: ['InDesign', 'Illustrator'],
+      desc: ['Carte format US réalisée sur InDesign (layout) et Illustrator (le 21).'],
     },
   ],
   programmation: [
