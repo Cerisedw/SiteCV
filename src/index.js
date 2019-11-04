@@ -6,6 +6,14 @@ import { arrImg } from './data/data';
 import { getSrcImg, createProjectContent, getWork } from './func/portfolioCreaC';
 import { hoverPort } from './func/hoverPortfolio';
 
+
+// loader
+
+$(window).on('load', () => {
+  $('.loader').fadeOut('slow');
+});
+
+
 // btn menu
 const btnportfolio = $('#navigation a.portfolio');
 const btncv = $('#navigation a.cv');
