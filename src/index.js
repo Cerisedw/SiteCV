@@ -9,9 +9,9 @@ import { hoverPort } from './func/hoverPortfolio';
 
 // loader
 
-$(window).on('load', () => {
-  $('.loader').fadeOut('slow');
-});
+// $(document).ready(() => {
+$('.loader').fadeOut('slow');
+// });
 
 
 // btn menu
