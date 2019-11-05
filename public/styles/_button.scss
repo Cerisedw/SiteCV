@@ -5,31 +5,31 @@
     color: $primary-color;
 }
 
-.bouton button {
-    list-style: none;
-    font-size: 2rem;
-    background: $primary-color ;
-    color: #fff ;
-    padding: 10px;
-    width: auto;
-    text-align: center;
-    border: none;
-}
-
-.bouton button:hover{
-    background: $secondary-color ;
-    color:$primary-color;
-    text-decoration: none ;
-    cursor: pointer;
+.bouton {
+    button {
+        list-style: none;
+        font-size: 2rem;
+        background: $primary-color ;
+        color: #fff ;
+        padding: 10px;
+        width: auto;
+        text-align: center;
+        border: none;
+    }
+    button:hover{
+        background: $secondary-color ;
+        color:$primary-color;
+        text-decoration: none ;
+        cursor: pointer;
+    }
+    .return {
+        padding: 10px 20px;
+    }
 }
 
 main .bouton {
     margin-bottom: 13px;
 } 
-
-.bouton .return {
-    padding: 10px 20px;
-}
 
 .boutonProjet {
     margin-top: 30px;

@@ -6,6 +6,9 @@
     background-color: white;
     width: 100%;
     height: 100%;
+    img {
+        max-width:100%;
+    }
 }
 
 .grid-item {
@@ -49,12 +52,12 @@
     color: #fff;
     margin: 0 0 55px  auto;
     cursor: pointer;
+    img {
+        height: 80px;
+        width: auto;
+    }
 }
 
-.logo img {
-    height: 80px;
-    width: auto;
-}
 
 .lienReseaux {
     color: white;
@@ -65,12 +68,12 @@
     display: flex;
     justify-content: space-around;
     padding: 0 20px;
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
-.lienReseaux a {
-    text-decoration: none;
-    color: white;
-}
 
 .lienReseauxDrop {
     color: white;
@@ -91,6 +94,7 @@
 }
 
 .workContent{
+    padding-bottom: 35px;
     img {
         max-width:800px;
         margin-bottom: 25px;
@@ -100,19 +104,18 @@
     }
     ul li {
         font-size: 1.7rem;
+        &::before {
+            content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: $secondary-color; /* Change the color */
+            font-weight: bold; /* If you want it to be bold */
+            display: inline-block; /* Needed to add space between the bullet and the text */
+            width: 1em; /* Also needed for space (tweak if needed) */
+            margin-left: -1em; /* Also needed for space (tweak if needed) */
+        }
     }
-    ul li::before {
-        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-        color: $secondary-color; /* Change the color */
-        font-weight: bold; /* If you want it to be bold */
-        display: inline-block; /* Needed to add space between the bullet and the text */
-        width: 1em; /* Also needed for space (tweak if needed) */
-        margin-left: -1em; /* Also needed for space (tweak if needed) */
-    }
-    padding-bottom: 35px;
 }
 
-@media (max-width: 575px) {
+@media (max-width: $screen-sm-min) {
     .workContent img {
         max-width: 250px;
     }

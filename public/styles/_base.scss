@@ -1,5 +1,3 @@
-
-
 * {
 	box-sizing: border-box;
 }
@@ -20,15 +18,23 @@ header {
 }
 
 main {
-  padding-left: 118px;
+  padding-left: 140px;
   padding-top: 65px;
   color: $primary-color;
   z-index: 1;
-
 }
 
-@media (max-width: 575px) {
+
+
+@media (max-width: $screen-lg-min) {
+  main {
+    padding-left: 118px;
+  }
+}
+
+@media (max-width: $screen-sm-min) {
   main {
     padding-left: 0;
   }
 }
+

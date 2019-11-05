@@ -101,16 +101,13 @@
             </div>
             <div class='row'>
               <div class='cv-papier col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6'>
-                  <div class="bouton">
-                    <button>Français</button>
-                  </div>        
-                <img src='.\assets\images\cv3-WADfr.jpg'>
+                  <h3>Français</h3>
+                  <a href="./assets/images/cv3-WAD.pdf" target="_blank"><img src='.\assets\images\cv3-WADfr.jpg'></a>    
+                
               </div>
               <div class='cv-papier col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6'>
-                  <div class="bouton">
-                    <button>Anglais</button>
-                  </div>
-                <img src='.\assets\images\cv3-WADeng.jpg'>
+                <h3>Anglais</h3>
+                <a href="./assets/images/cv3-WAD.pdf" target="_blank"><img src='.\assets\images\cv3-WADeng.jpg'></a>
               </div>
             </div>
           </div>
@@ -125,28 +122,27 @@
               <h2 class='col-12'>Contact</h2>
             </div>
             
-            <div class='row form-group'>
-              <div class='col-12 col-sm-12 col-md-6'>
-                <label for='Nom'>Nom</label>
-                <input class='form-control' type='text'>
+            <form action="https://formspree.io/moqagvza" method="POST">
+              <div class="row form-group">
+                <div class='col-12 col-sm-12 col-md-6'>
+                  <label for='Nom'>E-mail
+                    <input class='form-control' type="email" name="_replyto">
+                  </label>      
+                </div>
               </div>
-              <div class='col-12 col-sm-12 col-md-6'>
-                <label for='E-mail'>E-mail</label>
-                <input class='form-control' type='email'>
-              </div>  
-            </div>
-            <div class='row'>
-              <div class='col-12'>
-                <label for='Message'>Message</label>
-                <textarea class='form-control md-textarea' rows='5'></textarea>
+              <div class='row'>
+                <div class='col-12'>
+                  <label for='Message'>Message
+                  <textarea name="message" class='form-control md-textarea' rows='10'></textarea>
+                  </label>
+                </div>
+              </div> 
+              <div class='row bouton'>
+                <div class='col-12'>
+                  <button type='submit'>Envoyer</button>
+                </div>
               </div>
-            </div>
-            <div class='row bouton'>
-              <div class='col-12'>
-                <button>Envoyer</button>
-              </div>
-            </div>
-          </form>
+            </form>
           </div>
         </div>
       </main>
