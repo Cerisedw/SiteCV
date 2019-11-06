@@ -43,10 +43,13 @@ export const arrImg = {
     },
     {
       lien: '.\\assets\\images\\travaux\\imgProgJs-blanc.jpg',
-      nom: 'Projet JavaScript',
+      nom: 'Bullet Journal',
       techno: ['JavaScript', 'Node.Js'],
-      desc: ['Description du projet JavaScript | Node.Js'],
-      linGit: 'https://github.com/Cerisedw',
+      desc: [
+        'Petit exercice effectuer pour le cours de JavaScript.',
+        'On devait créer un petit bullet journal avec des couleurs pour dire quels activités ont a effectué quel activité. (sans Jquery)',
+      ],
+      linGit: 'https://github.com/Cerisedw/BulletJournal',
     },
     {
       lien: '.\\assets\\images\\travaux\\imgProgPhP-blanc.jpg',

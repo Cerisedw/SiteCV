@@ -9,8 +9,8 @@ export const hoverPort = (img) => {
           toto.css({
             position: 'absolute',
             backgroundColor: '#2B2934',
-            color: '#01B3C8',
-            fontWeight: 'bold',
+            color: '#00B3CC',
+            fontWeight: 'regular',
             fontSize: '1.8rem',
             padding: '10px',
             textAlign: 'center',
