@@ -21,6 +21,9 @@ export const createProjectContent = (img) => {
   console.log(img);
   const work = $('.workContent');
   work.empty();
+  // const div1 = $('<div class="col-12"></div>');
+  // const div2 = $('<div class="col-12 col-xl-6"></div>');
+  // const div3 = $('<div class="col-12 col-xl-6"></div>');
   work.append(`<h2>${img.nom}</h2>`);
   work.append(`<img src='${img.lien}'>`);
   work.append('<h3>Technologies utilisées</h3>');
@@ -38,6 +41,9 @@ export const createProjectContent = (img) => {
     boutonProj.append(`<a href='${img.linGit}' target='_blank'>Lien du projet</a>`);
     work.append(boutonProj);
   }
+  // work.append(div1);
+  // work.append(div2);
+  // work.append(div3);
 };
 
 // portfolio img
