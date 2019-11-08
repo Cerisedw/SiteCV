@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import { createProjectContent, getWork } from './portfolioCreaC';
+
 
 export const hoverPort = (img) => {
   img.on({
@@ -23,4 +25,17 @@ export const hoverPort = (img) => {
         .remove();
     },
   });
+};
+
+
+export const portInteraction = (works) => {
+  for (const img of works) {
+    hoverPort($(img));
+    $(img).on('click', (e) => {
+      $('.sectionMain').css({ display: 'none' });
+      $(window).scrollTop();
+      $('#workInfo').css({ display: 'block' });
+      createProjectContent(getWork(e.target));
+    });
+  }
 };

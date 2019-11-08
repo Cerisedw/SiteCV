@@ -8,11 +8,11 @@ export const getWork = (target) => {
   const idImg = $(target).parent().parent()[0].id;
   const arr = idImg === 'design' ? arrImg.design : arrImg.programmation;
   let result;
-  for (const work of arr) {
+  arr.forEach((work) => {
     if (work.nom === str) {
       result = work;
     }
-  }
+  });
   return result;
 };
 
@@ -21,45 +21,39 @@ export const createProjectContent = (img) => {
   console.log(img);
   const work = $('.workContent');
   work.empty();
-  // const div1 = $('<div class="col-12"></div>');
-  // const div2 = $('<div class="col-12 col-xl-6"></div>');
-  // const div3 = $('<div class="col-12 col-xl-6"></div>');
+
   work.append(`<h2>${img.nom}</h2>`);
   work.append(`<img src='${img.lien}'>`);
   work.append('<h3>Technologies utilisées</h3>');
   const ul = $('<ul></ul>');
-  for (const techno of img.techno) {
-    ul.append(`<li>${techno}</li>`);
-  }
+  img.techno.forEach((e) => ul.append(`<li>${e}</li>`));
+
   work.append(ul);
   work.append('<h3>Descritpions</h3>');
-  for (const p of img.desc) {
-    work.append(`<p>${p}</p>`);
-  }
+  img.desc.forEach((e) => work.append(`<p>${e}</p>`));
+
   if (img.linGit) {
     const boutonProj = $('<div class="boutonProjet"></div>');
     boutonProj.append(`<a href='${img.linGit}' target='_blank'>Lien du projet</a>`);
     work.append(boutonProj);
   }
-  // work.append(div1);
-  // work.append(div2);
-  // work.append(div3);
 };
 
 // portfolio img
 
 
 export const getSrcImg = (objImg) => {
-  for (const el of objImg.design) {
+  objImg.design.forEach((el) => {
     const divD = $("<div class='grid-item'></div>");
     divD.css({ display: 'inline-block' });
     divD.append(`<img title="${el.nom}" src ="${el.lien}">`);
     $('#design').append(divD);
-  }
-  for (const el of objImg.programmation) {
+  });
+
+  objImg.programmation.forEach((el) => {
     const divP = $("<div class='grid-item'></div>");
     divP.css({ display: 'inline-block' });
     divP.append(`<img title="${el.nom}" src ="${el.lien}">`);
     $('#programmation').append(divP);
-  }
+  });
 };

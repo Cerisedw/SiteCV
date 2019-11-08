@@ -3,8 +3,8 @@ import { change } from './func/portfolioBtn';
 import { logobtn, menubtn } from './func/menuBtn';
 import { logoDropdownBtn, menuDropdownBtn } from './func/menuDropdownBtn';
 import { arrImg } from './data/data';
-import { getSrcImg, createProjectContent, getWork } from './func/portfolioCreaC';
-import { hoverPort } from './func/hoverPortfolio';
+import { getSrcImg } from './func/portfolioCreaC';
+import { portInteraction } from './func/Portfolio';
 
 
 // loader
@@ -12,12 +12,9 @@ import { hoverPort } from './func/hoverPortfolio';
 $(window).on('load', () => {
   $('.loader').fadeOut('slow');
 });
-
-
 // $(document).ready(() => {
 //  $('.loader').fadeOut('slow');
 // });
-
 
 // btn menu
 const btnportfolio = $('#navigation a.portfolio');
@@ -30,32 +27,14 @@ btncontact.on('click', (e) => { menubtn(e); });
 btnportfolio.on('click', (e) => { menubtn(e); });
 btncv.on('click', (e) => { menubtn(e); });
 
-
 // portfolio bouton
 const btn = $('#btn-portfolio');
 btn.on('click', change);
 
 // portfolio gallerie
 getSrcImg(arrImg);
-
-
 const works = $('#portfolio img');
-
-for (const img of works) {
-  // affiche le nom de l'id (design, programmation)
-  // console.log($(img).parent()[0].id);
-
-
-  hoverPort($(img));
-
-  $(img).on('click', (e) => {
-    $('.sectionMain').css({ display: 'none' });
-    $(window).scrollTop();
-    $('#workInfo').css({ display: 'block' });
-    createProjectContent(getWork(e.target));
-  });
-}
-
+portInteraction(works);
 
 // bouton return
 
