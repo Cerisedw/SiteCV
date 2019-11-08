@@ -28,7 +28,7 @@ btnportfolio.on('click', (e) => { menubtn(e); });
 btncv.on('click', (e) => { menubtn(e); });
 
 // portfolio bouton
-const btn = $('#btn-portfolio');
+const btn = $('.btn-portfolio');
 btn.on('click', change);
 
 // portfolio gallerie
