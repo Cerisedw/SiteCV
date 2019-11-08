@@ -25,6 +25,16 @@ export const arrImg = {
       desc: ['Proposition d\'un logo pour le théatre S&S', 'Théatre ayant pour but de réunir les entendants et non entendants lors de pièce de théatre adaptée à tous.'],
     },
     {
+      lien: '.\\assets\\images\\travaux\\logo-test(1).png',
+      nom: 'Logo personnel',
+      techno: ['InDesign'],
+      desc: [
+        'Création d\'un logo personnel grâce à Illustrator.',
+        'L\'idée était de prendre la première lettre de mon prénom et d\'y attacher une queue d\'écureuil.',
+        'Les différentes couleurs sont des tests sur le thème de l\'écureuil / automne et également les couleurs de mon CV papier.',
+      ],
+    },
+    {
       lien: '.\\assets\\images\\travaux\\70_20170317_uitnodiging Manu_US_72.jpg',
       nom: 'Carte format US',
       techno: ['InDesign', 'Illustrator'],
