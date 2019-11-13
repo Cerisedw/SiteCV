@@ -4,18 +4,19 @@
     left: 50%;
     transform: translate(-50%, -50%);*/
     margin: 10px ;
+    padding: 5px;
     cursor: pointer;
     transition: 0.5s ease;
     height: 50px;
     .bar {
-      width: 55px;
-      height: 10px;
+      width: 45px;
+      height: 8px;
       background: #fff;
       //box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.4);
       border-radius: 2px;
       transition: 0.4s ease;
       &:not(:first-child) {
-        margin-top: 10px;
+        margin-top: 8px;
       }
     }
   }
@@ -36,7 +37,7 @@
         opacity: 0;
       }
       &:nth-child(3) {
-        margin-top: -30px;
+        margin-top: -24px;
         transform: rotate(45deg);
       }
     }
