@@ -60,6 +60,7 @@ export const arrImg = {
         'On devait créer un petit bullet journal avec des couleurs pour dire quels activités ont a effectué quel activité. (sans Jquery)',
       ],
       linGit: 'https://github.com/Cerisedw/BulletJournal',
+      lienDirect: 'Bullet',
     },
     {
       lien: '.\\assets\\images\\travaux\\imgProgPhP-blanc.jpg',
@@ -70,3 +71,9 @@ export const arrImg = {
     },
   ],
 };
+
+
+// data bullet journal
+export const jours = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+export const actObj = [{ nom: 'sport', couleur: 'rgb(168, 62, 102)' }, { nom: 'musique', couleur: 'rgb(140, 145, 71)' }, { nom: 'yoga', couleur: 'rgb(242, 120, 79)' },
+  { nom: 'méditation', couleur: 'rgb(94, 133, 164)' }, { nom: 'sieste', couleur: 'rgb(136, 100, 136)' }];

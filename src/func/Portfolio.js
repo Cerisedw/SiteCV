@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { createProjectContent, getWork } from './portfolioCreaC';
+import { affBulletJournal } from './bulletJournal';
 
 
 export const hoverPort = (img) => {
@@ -35,6 +36,7 @@ export const portInteraction = (works) => {
       $(window).scrollTop();
       $('#workInfo').css({ display: 'block' });
       createProjectContent(getWork(e.target));
+      $('#btnBullet').on('click', affBulletJournal);
     });
   }
 };

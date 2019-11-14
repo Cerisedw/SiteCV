@@ -37,6 +37,13 @@ export const createProjectContent = (img) => {
     boutonProj.append(`<a href='${img.linGit}' target='_blank'>Lien du projet</a>`);
     work.append(boutonProj);
   }
+  if (img.lienDirect) {
+    const boutonDirect = $('<div class="bouton"></div>');
+    boutonDirect.append('<button id="btnBullet">Afficher</button>');
+    const divDirect = $(`<div id="${img.lienDirect}"></div>`);
+    work.append(boutonDirect);
+    work.append(divDirect);
+  }
 };
 
 // portfolio img
