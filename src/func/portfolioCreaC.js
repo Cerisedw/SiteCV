@@ -21,28 +21,34 @@ export const createProjectContent = (img) => {
   console.log(img);
   const work = $('.workContent');
   work.empty();
+  const div1 = $('<div class="col-12"></div>');
+  const div2 = $('<div class="col-12 col-xl-6"></div>');
 
-  work.append(`<h2>${img.nom}</h2>`);
-  work.append(`<img src='${img.lien}'>`);
-  work.append('<h3>Technologies utilisées</h3>');
+  div1.append(`<h2>${img.nom}</h2>`);
+  div1.append(`<img src='${img.lien}'>`);
+  work.append(div1);
+  div2.append('<h3>Technologies utilisées</h3>');
   const ul = $('<ul></ul>');
   img.techno.forEach((e) => ul.append(`<li>${e}</li>`));
 
-  work.append(ul);
-  work.append('<h3>Descritpions</h3>');
-  img.desc.forEach((e) => work.append(`<p>${e}</p>`));
+  div2.append(ul);
+  div2.append('<h3>Descritpions</h3>');
+  img.desc.forEach((e) => div2.append(`<p>${e}</p>`));
 
   if (img.linGit) {
     const boutonProj = $('<div class="boutonProjet"></div>');
     boutonProj.append(`<a href='${img.linGit}' target='_blank'>Lien du projet</a>`);
-    work.append(boutonProj);
+    div2.append(boutonProj);
   }
+  work.append(div2);
+  const div3 = $('<div class="col-12 col-xl-6"></div>');
   if (img.lienDirect) {
     const boutonDirect = $('<div class="bouton"></div>');
     boutonDirect.append('<button id="btnBullet">Afficher</button>');
     const divDirect = $(`<div id="${img.lienDirect}"></div>`);
-    work.append(boutonDirect);
-    work.append(divDirect);
+    div3.append(boutonDirect);
+    div3.append(divDirect);
+    work.append(div3);
   }
 };
 
