@@ -6,7 +6,6 @@ export const hoverPort = (img) => {
   img.on({
     mouseenter:
         (e) => {
-          console.log(e.target);
           const toto = $(`<p>${$(e.target)[0].attributes.title.nodeValue}</p>`);
           toto.css({
             position: 'absolute',

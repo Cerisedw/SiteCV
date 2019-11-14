@@ -7,6 +7,7 @@ export const menuDropdownBtn = (x) => {
   $('#workInfo').css({ display: 'none' });
   y.css('display', 'block');
   $('.drop').slideToggle('slow');
+  $('#btnDropdown').prop('checked', false);
 };
 
 export const logoDropdownBtn = () => {
@@ -15,4 +16,5 @@ export const logoDropdownBtn = () => {
   $('#workInfo').css({ display: 'none' });
   y.css('display', 'block');
   $('.drop').slideToggle('slow');
+  $('#btnDropdown').prop('checked', false);
 };
