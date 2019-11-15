@@ -36,13 +36,13 @@ export const portInteraction = (works) => {
       $(window).scrollTop();
       $('#workInfo').css({ display: 'block' });
       createProjectContent(getWork(e.target));
-      $('#btnBullet').on('click', (e) => {
+      $('#btnBullet').on('click', (f) => {
         if (!$('#Bullet').is(':empty')) {
           $('#Bullet').empty();
-          e.target.innerText = 'Afficher';
+          f.target.innerText = 'Afficher';
         } else {
           affBulletJournal();
-          e.target.innerText = 'Cacher';
+          f.target.innerText = 'Cacher';
         }
       });
     });
