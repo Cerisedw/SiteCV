@@ -36,7 +36,15 @@ export const portInteraction = (works) => {
       $(window).scrollTop();
       $('#workInfo').css({ display: 'block' });
       createProjectContent(getWork(e.target));
-      $('#btnBullet').on('click', affBulletJournal);
+      $('#btnBullet').on('click', (e) => {
+        if (!$('#Bullet').is(':empty')) {
+          $('#Bullet').empty();
+          e.target.innerText = 'Afficher';
+        } else {
+          affBulletJournal();
+          e.target.innerText = 'Cacher';
+        }
+      });
     });
   }
 };

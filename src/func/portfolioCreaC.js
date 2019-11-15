@@ -46,7 +46,7 @@ export const createProjectContent = (img) => {
     const boutonDirect = $('<div class="bouton"></div>');
     boutonDirect.append('<button id="btnBullet">Afficher</button>');
     const divDirect = $(`<div id="${img.lienDirect}"></div>`);
-    div3.append(boutonDirect);
+    div2.append(boutonDirect);
     div3.append(divDirect);
     work.append(div3);
   }
