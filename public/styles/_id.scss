@@ -1,10 +1,10 @@
 // ID
-#portfolio, #cv, #contact {
+#portfolio, #cv, #contact, #portfolio {
     display: none;
+    padding-bottom: 15px;
 }
 #about {
     display:block;
-    padding-bottom: 15px;
     h2 {
         margin-top: 4rem;
     }
@@ -90,7 +90,6 @@
     display:none;
 }
 #portfolio {
-    padding-bottom: 15px;
     img {
         max-width: 400px;
         cursor: pointer;
