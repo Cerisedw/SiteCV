@@ -5,10 +5,10 @@ import { logoDropdownBtn, menuDropdownBtn } from './func/menuDropdownBtn';
 import { arrImg } from './data/data';
 import { getSrcImg } from './func/portfolioCreaC';
 import { portInteraction } from './func/Portfolio';
+import { meaAccueil, meaInteraction } from './func/meaAccueil';
 
 
 // loader
-
 $(window).on('load', () => {
   $('.loader').fadeOut('slow');
 });
@@ -62,3 +62,10 @@ btnDroplogo.on('click', () => { logoDropdownBtn(); });
 btnDropcontact.on('click', (e) => { menuDropdownBtn(e); });
 btnDropportfolio.on('click', (e) => { menuDropdownBtn(e); });
 btnDropcv.on('click', (e) => { menuDropdownBtn(e); });
+
+
+// MEA accueil
+
+meaAccueil(arrImg);
+const meaWorks = $('#about img');
+meaInteraction(meaWorks);
