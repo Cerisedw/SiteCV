@@ -78,6 +78,16 @@ export const arrImg = {
       desc: ['Description du projet PhP | Symphony'],
       linGit: 'https://github.com/Cerisedw',
     },
+    {
+      id: 3,
+      lien: '.\\assets\\images\\travaux\\imgProgCsharp-blanc.jpg',
+      nom: 'i3asp-develop',
+      techno: ['C#', 'Asp.net'],
+      desc: ['Projet d\'intégration d\'un thème Html Css Js dans un projet Asp.net utilisant le modèle MVC.',
+        'Projet réalisé lors du cours d\'Asp chez Interface 3.',
+      ],
+      linGit: 'https://github.com/Cerisedw/i3asp-develop',
+    },
   ],
 };
 
