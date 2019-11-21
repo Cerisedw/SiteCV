@@ -12,9 +12,9 @@ export const sendMail = () => {
       Username: 'myrtille1221@gmail.com',
       Password: '4a01ee2d-dad4-492f-ba83-f0dc37e66dcb',
       To: 'cerise.mailpro@gmail.com',
-      From: emailFrom,
-      Subject: titreMail,
-      Body: message,
+      From: `${emailFrom}`,
+      Subject: `${titreMail}`,
+      Body: `${message}`,
     }).then(
       () => { alert('Message envoyé'); window.location.reload(); },
     );
