@@ -18,7 +18,6 @@ export const getWork = (target) => {
 
 // portfolio creation du contenu des projets (si ils sont sous forme obj JS)
 export const createProjectContent = (img) => {
-  console.log(img);
   const work = $('.workContent');
   work.empty();
   const div1 = $('<div class="col-12"></div>');

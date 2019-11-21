@@ -5,9 +5,7 @@ import { affBulletJournal } from './bulletJournal';
 
 export const meaAccueil = (objImg) => {
   const nmbD = Math.floor(Math.random() * objImg.design.length);
-  console.log(nmbD);
   const meaD = objImg.design.filter((u) => u.id === nmbD);
-  console.log(meaD);
   const divD = $('<div></div>');
   divD.css({ display: 'inline-block' });
   divD.append(`<h3>${meaD[0].nom}</h3>`);
@@ -15,7 +13,6 @@ export const meaAccueil = (objImg) => {
   $('#meaDesign').append(divD);
 
   const nmbP = Math.floor(Math.random() * objImg.programmation.length);
-  console.log(nmbP);
   const meaP = objImg.programmation.filter((u) => u.id === nmbP);
   const divP = $('<div></div>');
   divP.css({ display: 'inline-block' });
