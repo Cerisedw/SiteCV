@@ -6,6 +6,7 @@
 html {
   font-size: 62.5%;
   height: 100%;
+  -webkit-font-smoothing: antialiased;
 
 }
 
@@ -25,6 +26,8 @@ main {
   padding-top: 65px;
   color: $primary-color;
   z-index: 1;
+  margin-bottom: 15px;
+
 }
 
 

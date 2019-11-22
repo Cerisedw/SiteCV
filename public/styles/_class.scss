@@ -10,8 +10,8 @@
     transform: translate(-50%, -50%);
     height: 100%;
     img {
-        margin-top: 45vh;
-        margin-left: 45vw;
+        // margin-top: 45vh;
+        // margin-left: 45vw;
     }
 }
 
@@ -141,4 +141,9 @@
 
 .meaCont {
     max-width: 750px;
+}
+
+
+.emailInp, .titreInp, .messageInp {
+    margin-top: 5px;
 }

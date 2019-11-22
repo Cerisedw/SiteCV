@@ -5,7 +5,7 @@ import { logoDropdownBtn, menuDropdownBtn } from './func/menuDropdownBtn';
 import { arrImg } from './data/data';
 import { getSrcImg } from './func/portfolioCreaC';
 import { portInteraction } from './func/Portfolio';
-import { meaAccueil, meaInteraction } from './func/meaAccueil';
+import { meaAccueil, meaInteraction, intervalMea } from './func/meaAccueil';
 import { validateEmail } from './func/verifyMail';
 
 
@@ -66,10 +66,10 @@ btnDropcv.on('click', (e) => { menuDropdownBtn(e); });
 
 
 // MEA accueil
-
-meaAccueil(arrImg);
-const meaWorks = $('#about img');
-meaInteraction(meaWorks);
+intervalMea(arrImg);
+setInterval(() => {
+  intervalMea(arrImg);
+}, 20000);
 
 
 // Vérifier mail
@@ -77,29 +77,32 @@ meaInteraction(meaWorks);
 $('.emailInp').on('keypress keyup paste', () => {
   const email = $('.emailInp').val();
   if (validateEmail(email)) {
-    $('.emailInp').css({ border: 'solid 1px green' });
+    $('.emailInp').css({ border: 'solid 2px green' });
   } else {
-    $('.emailInp').css({ border: 'solid 1px red' });
+    $('.emailInp').css({ border: 'solid 2px red' });
   }
 });
 
 // Envoie email
-$('#btnContact').on('click', () => {
+$('#btnContact').on('click', (e) => {
+  e.preventDefault();
   const message = $('.messageInp').val();
   const titreMail = $('.titreInp').val();
   const emailFrom = $('.emailInp').val();
 
   if (validateEmail(emailFrom)) {
+    // eslint-disable-next-line no-undef
     Email.send({
       Host: 'smtp.elasticemail.com',
-      Username: 'myrtille1221@gmail.com',
-      Password: '4a01ee2d-dad4-492f-ba83-f0dc37e66dcb',
+      Username: 'jordanedevtest@gmail.com',
+      Password: '2bc75105-db87-4212-a09f-aed941fbaa94',
       To: 'cerise.mailpro@gmail.com',
-      From: `${emailFrom}`,
+      From: 'jordanedevtest@gmail.com',
       Subject: `${titreMail}`,
-      Body: `${message}`,
+      Body: `Le message est : ${message} 
+             Auteur du mail : ${emailFrom}`,
     }).then(
-      () => { alert('Message envoyé'); window.location.reload(); },
+      () => { alert('Message envoyé'); },
     );
   } else {
     console.log('email non valide');

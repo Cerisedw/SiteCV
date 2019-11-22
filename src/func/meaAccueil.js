@@ -56,3 +56,12 @@ export const meaInteraction = (works) => {
     });
   }
 };
+
+
+export const intervalMea = (arr) => {
+  $('#meaProg').empty();
+  $('#meaDesign').empty();
+  meaAccueil(arr);
+  const meaWorks = $('#about img');
+  meaInteraction(meaWorks);
+};
