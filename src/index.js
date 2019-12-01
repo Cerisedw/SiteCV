@@ -95,10 +95,10 @@ $('#btnContact').on('click', (e) => {
     // eslint-disable-next-line no-undef
     Email.send({
       Host: 'smtp.elasticemail.com',
-      Username: 'jordanedevtest@gmail.com',
-      Password: '2bc75105-db87-4212-a09f-aed941fbaa94',
-      To: 'cerise.mailpro@gmail.com',
-      From: 'jordanedevtest@gmail.com',
+      Username: 'cyarin478@gmail.com',
+      Password: 'd0eb6dcb-bd62-44df-a8de-8abdbd2de605',
+      To: 'cyarin478@gmail.com',
+      From: 'cyarin478@gmail.com',
       Subject: `${titreMail}`,
       Body: `Le message est : ${message} 
              Auteur du mail : ${emailFrom}`,
