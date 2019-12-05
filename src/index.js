@@ -7,7 +7,6 @@ import { getSrcImg } from './func/portfolioCreaC';
 import { portInteraction } from './func/Portfolio';
 import { intervalMea } from './func/meaAccueil';
 import { validateEmail } from './func/verifyMail';
-// import { pika } from './func/pika/pika';
 
 
 // loader
@@ -109,4 +108,3 @@ $('#btnContact').on('click', (e) => {
     console.log('email non valide');
   }
 });
-
