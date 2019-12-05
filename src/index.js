@@ -7,6 +7,7 @@ import { getSrcImg } from './func/portfolioCreaC';
 import { portInteraction } from './func/Portfolio';
 import { intervalMea } from './func/meaAccueil';
 import { validateEmail } from './func/verifyMail';
+import { createBtnPika } from './func/logoChangePika';
 
 
 // loader
@@ -102,9 +103,15 @@ $('#btnContact').on('click', (e) => {
       Body: `Le message est : ${message} 
              Auteur du mail : ${emailFrom}`,
     }).then(
+      // eslint-disable-next-line no-alert
       () => { alert('Message envoyé'); },
     );
   } else {
     console.log('email non valide');
   }
 });
+
+
+// easter egg
+// changeLogoPika();
+createBtnPika();
