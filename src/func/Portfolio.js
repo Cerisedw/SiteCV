@@ -11,7 +11,7 @@ export const hoverPort = (img) => {
           toto.css({
             position: 'absolute',
             backgroundColor: '#2B2934',
-            color: '#00B3CC',
+            color: 'var(--secondaryColor)',
             fontWeight: 'regular',
             fontSize: '1.8rem',
             padding: '10px',
@@ -37,12 +37,13 @@ export const portInteraction = (works) => {
       $('#workInfo').css({ display: 'block' });
       createProjectContent(getWork(e.target));
       $('#btnBullet').on('click', (f) => {
+        const btnN = f;
         if (!$('#Bullet').is(':empty')) {
           $('#Bullet').empty();
-          f.target.innerText = 'Afficher';
+          btnN.target.innerText = 'Afficher';
         } else {
           affBulletJournal();
-          f.target.innerText = 'Cacher';
+          btnN.target.innerText = 'Cacher';
         }
       });
     });

@@ -17,7 +17,7 @@
         border: none;
     }
     button:hover{
-        background: $secondary-color ;
+        background: var(--secondaryColor) ;
         color:$primary-color;
         text-decoration: none ;
         cursor: pointer;
@@ -41,7 +41,7 @@ main .bouton {
         padding: 10px;
     }
     a:hover {
-        background: $secondary-color ;
+        background: var(--secondaryColor) ;
         color:$primary-color;
     }
 }

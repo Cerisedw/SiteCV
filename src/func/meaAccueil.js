@@ -25,7 +25,6 @@ export const meaAccueil = (objImg) => {
 const getMeaWork = (target) => {
   const str = $(target)[0].attributes.title.nodeValue;
   const idImg = $(target).parent().parent()[0].id;
-  console.log(idImg);
   const arr = idImg === 'meaDesign' ? arrImg.design : arrImg.programmation;
   let result;
   arr.forEach((work) => {
@@ -45,12 +44,13 @@ export const meaInteraction = (works) => {
       $('#workInfo').css({ display: 'block' });
       createProjectContent(getMeaWork(e.target));
       $('#btnBullet').on('click', (f) => {
+        const btnF = f;
         if (!$('#Bullet').is(':empty')) {
           $('#Bullet').empty();
-          f.target.innerText = 'Afficher';
+          btnF.target.innerText = 'Afficher';
         } else {
           affBulletJournal();
-          f.target.innerText = 'Cacher';
+          btnF.target.innerText = 'Cacher';
         }
       });
     });
