@@ -5,9 +5,9 @@ import { logoDropdownBtn, menuDropdownBtn } from './func/menuDropdownBtn';
 import { arrImg } from './data/data';
 import { getSrcImg } from './func/portfolioCreaC';
 import { portInteraction } from './func/Portfolio';
-import { meaAccueil, meaInteraction, intervalMea } from './func/meaAccueil';
+import { intervalMea } from './func/meaAccueil';
 import { validateEmail } from './func/verifyMail';
-import { pika } from './func/pika/pika';
+// import { pika } from './func/pika/pika';
 
 
 // loader
@@ -110,18 +110,3 @@ $('#btnContact').on('click', (e) => {
   }
 });
 
-
-// // pika
-
-// const pi = $('.pika');
-// pi.on('click', () => {
-//   $('.sectionMain').css({ display: 'none' });
-//   $('#navigation').css({ display: 'none' });
-//   $('#Pika').css({ display: 'block' });
-//   pika();
-// });
-
-// const reload = $('.reload');
-// reload.on('click', () => {
-//   window.location.reload();
-// });

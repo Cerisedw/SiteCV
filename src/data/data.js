@@ -88,6 +88,18 @@ export const arrImg = {
       ],
       linGit: 'https://github.com/Cerisedw/i3asp-develop',
     },
+    {
+      id: 4,
+      lien: '.\\assets\\images\\travaux\\imgProgPhP-blanc.jpg',
+      nom: 'Hackathon Interface3 2019',
+      techno: ['PhP', 'JavaScript', 'Ajax'],
+      desc: ['Projet en équipe de 4 réalisé durant le hackathon 2019 d\'Interface 3.', 
+        'Durant ces 3 jours, je me suis occupée du côté back-end du site web (DataBase, PhP pour les requêtes et des requetes Ajax via le JavaScript).', 
+        'Notre projet était de faire un site web où l\'on pouvait s\'identifier afin de proposer des objets (physique ou virtuel) afin de les donner.', 
+        'Les autres utilisateurs pouvaient ainsi demandé les objets qui les interessait et la personne ayant mis l\'objet sur le site sera notifié par email qu\'une personne est interessé par son objet.',
+      ],
+      linGit: 'https://github.com/joruchan/i3-market-place',
+    },
   ],
 };
 
