@@ -70,7 +70,7 @@ btnDropcv.on('click', (e) => { menuDropdownBtn(e); });
 intervalMea(arrImg);
 setInterval(() => {
   intervalMea(arrImg);
-}, 20000);
+}, 7500);
 
 
 // Vérifier mail
