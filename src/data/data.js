@@ -70,14 +70,7 @@ export const arrImg = {
       linGit: 'https://github.com/Cerisedw/BulletJournal',
       lienDirect: 'Bullet',
     },
-    {
-      id: 2,
-      lien: '.\\assets\\images\\travaux\\imgProgPhP-blanc.jpg',
-      nom: 'Projet PhP',
-      techno: ['PhP', 'Symphony'],
-      desc: ['Description du projet PhP | Symphony'],
-      linGit: 'https://github.com/Cerisedw',
-    },
+
     {
       id: 3,
       lien: '.\\assets\\images\\travaux\\imgProgCsharp-blanc.jpg',
