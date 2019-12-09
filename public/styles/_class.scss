@@ -147,3 +147,30 @@
 .emailInp, .titreInp, .messageInp {
     margin-top: 5px;
 }
+
+.workTitle {
+    position: absolute;
+    background-color: #2B2934;
+    color: var(--secondaryColor);
+    font-weight: regular;
+    font-size: 1.8rem;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.workSpecs{
+    position: absolute;
+    background-color: #2B2934;
+    color: var(--secondaryColor);
+    font-weight: regular;
+    font-size: 1.8rem;
+    padding: 10px;
+    margin-top: 10%;
+    text-align: center;
+    width: 100%;
+}
+
+.listeProjet{
+    display: inline-block;
+}

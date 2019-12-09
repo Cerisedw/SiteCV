@@ -1,30 +1,42 @@
 import $ from 'jquery';
 import { createProjectContent, getWork } from './portfolioCreaC';
 import { affBulletJournal } from './bulletJournal';
+import { arrImg } from '../data/data';
 
 
 export const hoverPort = (img) => {
-  img.on({
-    mouseenter:
+  if ($(img).parent().parent()[0].id === 'design') {
+    img.on({
+      mouseenter:
         (e) => {
-          const toto = $(`<p>${$(e.target)[0].attributes.title.nodeValue}</p>`);
-          toto.css({
-            position: 'absolute',
-            backgroundColor: '#2B2934',
-            color: 'var(--secondaryColor)',
-            fontWeight: 'regular',
-            fontSize: '1.8rem',
-            padding: '10px',
-            textAlign: 'center',
-            width: '100%',
-          });
+          const toto = $(`<p class="workTitle">${$(e.target)[0].attributes.title.nodeValue}</p>`);
           toto.prependTo($(e.target).parent());
         },
-    mouseleave: (e) => {
-      $(e.target).parent().find('p').last()
-        .remove();
-    },
-  });
+      mouseleave: (e) => {
+        $(e.target).parent().find('p').last()
+          .remove();
+      },
+    });
+  } else {
+    img.on({
+      mouseenter:
+        (e) => {
+          const arrayWorks = arrImg.programmation
+            .filter((work) => work.nom === $(e.target)[0].title);
+          const stringTechno = arrayWorks[0].techno.reduce((acc, curr, ind) => {
+            if (ind !== 0) {
+              return `${curr} | ${acc}`;
+            } return `${curr} ${acc}`;
+          }, '');
+          const toto = $(`<p class="workSpecs">${stringTechno}</p>`);
+          toto.prependTo($(e.target).parent());
+        },
+      mouseleave: () => {
+        $('.workSpecs')
+          .remove();
+      },
+    });
+  }
 };
 
 

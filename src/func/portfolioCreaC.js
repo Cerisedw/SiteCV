@@ -56,16 +56,21 @@ export const createProjectContent = (img) => {
 
 export const getSrcImg = (objImg) => {
   objImg.design.forEach((el) => {
-    const divD = $("<div class='grid-item'></div>");
-    divD.css({ display: 'inline-block' });
-    divD.append(`<img title="${el.nom}" src ="${el.lien}">`);
+    const divD = $(`
+    <div class='grid-item listeProjet'>
+      <img title="${el.nom}" src ="${el.lien}">
+    </div>
+    `);
     $('#design').append(divD);
   });
 
   objImg.programmation.forEach((el) => {
-    const divP = $("<div class='grid-item'></div>");
-    divP.css({ display: 'inline-block' });
-    divP.append(`<img title="${el.nom}" src ="${el.lien}">`);
+    const divP = $(`
+    <div class='grid-item listeProjet'>
+      <p class="workTitle">${el.nom}</p>
+      <img title="${el.nom}" src ="${el.lien}">
+    </div>
+    `);
     $('#programmation').append(divP);
   });
 };
