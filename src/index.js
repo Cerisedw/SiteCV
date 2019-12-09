@@ -6,7 +6,7 @@ import { arrImg } from './data/data';
 import { getSrcImg } from './func/portfolioCreaC';
 import { portInteraction } from './func/Portfolio';
 import { intervalMea } from './func/meaAccueil';
-import { validateEmail } from './func/verifyMail';
+import { validateEmail, envoieMail } from './func/verifyMail';
 import { createBtnPika } from './func/logoChangePika';
 
 
@@ -86,29 +86,7 @@ $('.emailInp').on('keypress keyup paste', () => {
 
 // Envoie email
 $('#btnContact').on('click', (e) => {
-  e.preventDefault();
-  const message = $('.messageInp').val();
-  const titreMail = $('.titreInp').val();
-  const emailFrom = $('.emailInp').val();
-
-  if (validateEmail(emailFrom)) {
-    // eslint-disable-next-line no-undef
-    Email.send({
-      Host: 'smtp.elasticemail.com',
-      Username: 'cyarin478@gmail.com',
-      Password: 'd0eb6dcb-bd62-44df-a8de-8abdbd2de605',
-      To: 'cyarin478@gmail.com',
-      From: 'cyarin478@gmail.com',
-      Subject: `${titreMail}`,
-      Body: `Le message est : ${message} 
-             Auteur du mail : ${emailFrom}`,
-    }).then(
-      // eslint-disable-next-line no-alert
-      () => { alert('Message envoyé'); },
-    );
-  } else {
-    console.log('email non valide');
-  }
+  envoieMail(e);
 });
 
 

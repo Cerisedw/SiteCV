@@ -6,18 +6,24 @@ import { affBulletJournal } from './bulletJournal';
 export const meaAccueil = (objImg) => {
   const nmbD = Math.floor(Math.random() * objImg.design.length);
   const meaD = objImg.design.filter((u) => u.id === nmbD);
-  const divD = $('<div></div>');
+  const divD = $(`
+  <div>
+    <h3>${meaD[0].nom}</h3>
+    <img title="${meaD[0].nom}" src ="${meaD[0].lien}">
+  </div>
+  `);
   divD.css({ display: 'inline-block' });
-  divD.append(`<h3>${meaD[0].nom}</h3>`);
-  divD.append(`<img title="${meaD[0].nom}" src ="${meaD[0].lien}">`);
   $('#meaDesign').append(divD);
 
   const nmbP = Math.floor(Math.random() * objImg.programmation.length);
   const meaP = objImg.programmation.filter((u) => u.id === nmbP);
-  const divP = $('<div></div>');
+  const divP = $(`
+  <div>
+    <h3>${meaP[0].nom}</h3>
+    <img title="${meaP[0].nom}" src ="${meaP[0].lien}">
+  </div>
+  `);
   divP.css({ display: 'inline-block' });
-  divP.append(`<h3>${meaP[0].nom}</h3>`);
-  divP.append(`<img title="${meaP[0].nom}" src ="${meaP[0].lien}">`);
   $('#meaProg').append(divP);
 };
 

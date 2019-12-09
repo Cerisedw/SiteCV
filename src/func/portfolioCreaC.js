@@ -20,13 +20,19 @@ export const getWork = (target) => {
 export const createProjectContent = (img) => {
   const work = $('.workContent');
   work.empty();
-  const div1 = $('<div class="col-12"></div>');
-  const div2 = $('<div class="col-12 col-xl-6"></div>');
+  const div1 = $(`
+    <div class="col-12">
+      <h2>${img.nom}</h2>
+      <img src='${img.lien}'>
+    </div>
+  `);
+  const div2 = $(`
+    <div class="col-12 col-xl-6">
+      <h3>Technologies utilisées</h3>
+    </div>
+  `);
 
-  div1.append(`<h2>${img.nom}</h2>`);
-  div1.append(`<img src='${img.lien}'>`);
   work.append(div1);
-  div2.append('<h3>Technologies utilisées</h3>');
   const ul = $('<ul></ul>');
   img.techno.forEach((e) => ul.append(`<li>${e}</li>`));
 
