@@ -72,7 +72,7 @@ export const arrImg = {
     },
 
     {
-      id: 3,
+      id: 2,
       lien: '.\\assets\\images\\travaux\\imgProgCsharp-blanc.jpg',
       nom: 'i3asp-develop',
       techno: ['C#', 'Asp.net'],
@@ -82,7 +82,7 @@ export const arrImg = {
       linGit: 'https://github.com/Cerisedw/i3asp-develop',
     },
     {
-      id: 4,
+      id: 3,
       lien: '.\\assets\\images\\travaux\\imgProgPhP-blanc.jpg',
       nom: 'Hackathon Interface3 2019',
       techno: ['PhP', 'JavaScript', 'Ajax'],
