@@ -37,7 +37,7 @@ export const createProjectContent = (img) => {
   img.techno.forEach((e) => ul.append(`<li>${e}</li>`));
 
   div2.append(ul);
-  div2.append('<h3>Descritpions</h3>');
+  div2.append('<h3>Description</h3>');
   img.desc.forEach((e) => div2.append(`<p>${e}</p>`));
 
   if (img.linGit) {
