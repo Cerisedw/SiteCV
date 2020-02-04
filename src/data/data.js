@@ -93,6 +93,16 @@ export const arrImg = {
       ],
       linGit: 'https://github.com/joruchan/i3-market-place',
     },
+    {
+      id: 4,
+      lien: '.\\assets\\images\\travaux\\imgProgCsharp-blanc.jpg',
+      nom: 'PokeListe',
+      techno: ['C#', 'Asp.net', 'Ajax'],
+      desc: ['Projet personnelle de création d\'une web application sur le sujet de Pokémon.',
+        'Il s\'agit d\'une liste de Pokémon que l\'on peut ajouter afin de savoir quels Pokémon ont possède.',
+      ],
+      linGit: 'https://github.com/Cerisedw/PokeListe',
+    },
   ],
 };
 
