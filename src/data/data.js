@@ -103,6 +103,14 @@ export const arrImg = {
       ],
       linGit: 'https://github.com/Cerisedw/PokeListe',
     },
+    {
+      id: 5,
+      lien: '.\\assets\\images\\travaux\\imgProgJs-blanc.jpg',
+      nom: 'PokeListe ReactJS',
+      techno: ['JavaScript', 'ReactJS'],
+      desc: ['Projet personnel créer afin de m\'entrainer à utiliser une api et les hooks en ReactJS.'],
+      linGit: 'https://github.com/Cerisedw/react-pokeapi',
+    },
   ],
 };
 
