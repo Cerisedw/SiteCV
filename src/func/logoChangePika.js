@@ -5,14 +5,14 @@ export const changeLogoPika = () => {
   for (const logo of $('.logo')) {
     if ($(logo).children().attr('src') === './assets/images/pikaHead.png') {
       $(logo).children().attr('src', './assets/images/logo-bleu.png');
-      $('#cvFR').attr('src', '.\\assets\\images\\CV\\cv-WAD-07-20203.jpg');
-      $('#cvENG').attr('src', '.\\assets\\images\\CV\\cv-WAD-07-20204.jpg');
+      $('#cvFR').attr('src', '.\\assets\\images\\CV\\cv-WAD-07-2020-bfr.jpg');
+      $('#cvENG').attr('src', '.\\assets\\images\\CV\\cv-WAD-07-2020-ben.jpg');
       const root = document.documentElement;
       root.style.setProperty('--secondaryColor', '#00B3CC');
     } else {
       $(logo).children().attr('src', './assets/images/pikaHead.png');
-      $('#cvFR').attr('src', '.\\assets\\images\\CV\\cv-WAD-07-2020.jpg');
-      $('#cvENG').attr('src', '.\\assets\\images\\CV\\cv-WAD-07-20202.jpg');
+      $('#cvFR').attr('src', '.\\assets\\images\\CV\\cv-WAD-07-2020-jfr.jpg');
+      $('#cvENG').attr('src', '.\\assets\\images\\CV\\cv-WAD-07-2020-jen.jpg');
       const root = document.documentElement;
       root.style.setProperty('--secondaryColor', '#ffc34d');
     }
