@@ -111,6 +111,23 @@ export const arrImg = {
       desc: ['Projet personnel créer afin de m\'entrainer à utiliser une api et les hooks en ReactJS.'],
       linGit: 'https://github.com/Cerisedw/react-pokeapi',
     },
+    {
+      id: 6,
+      lien: '.\\assets\\images\\travaux\\imgProgPhP-blanc.jpg',
+      nom: 'Pokemon Card deck creator',
+      techno: ['PhP', 'Symfony', 'JavaScript', 'Ajax'],
+      desc: ['Projet de fin de dormation réalisé en Symfony.', 'J\'ai créé un projet de création de deck de carte Pokémon prise depuis une api.', 'J\'y ai créer la pagination et le système de filtrage de a à z sans utiliser de plugin pour m\'entraîner.'],
+      linGit: 'https://github.com/Cerisedw/pokemonCard',
+    },
+    {
+      id: 7,
+      lien: '.\\assets\\images\\travaux\\imgProgCsharp-blanc.jpg',
+      nom: 'Stage LetsBuild: création d\'api',
+      techno: ['C#', 'Asp.net Core', 'Docker', 'Minio', 'MongoDB'],
+      desc: ['Stage de 8 semaines durant lequel j’ai créer une Api en Asp.net core.',
+        'J’ai implémenté les opérations CRUD sur plusieurs entités (Document, Topic, Comment, ...). ',
+        'J’y ai également appris l’utilisation de Docker afin de créer et d’utiliser des images locales de Minio, MongoDB.Implémentation de l’upload, download de fichier via Minio ainsi que la création d’une route qui permet d’exporter les données d’un projet en fichier au format BCF'],
+    },
   ],
 };
 
