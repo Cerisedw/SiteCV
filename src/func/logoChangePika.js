@@ -6,7 +6,7 @@ export const changeLogoPika = () => {
     if ($(logo).children().attr('src') === './assets/images/pikaHead.png') {
       $(logo).children().attr('src', './assets/images/logo-bleu.png');
       $('#cvFR').attr('src', '.\\assets\\images\\CV\\cv-WAD-08-fr.jpg');
-      $('#cvENG').attr('src', '.\\assets\\images\\CV\\v-WAD-08-en.jpg');
+      $('#cvENG').attr('src', '.\\assets\\images\\CV\\cv-WAD-08-en.jpg');
       const root = document.documentElement;
       root.style.setProperty('--secondaryColor', '#00B3CC');
     } else {
