@@ -14,9 +14,7 @@ import { createBtnPika } from './func/logoChangePika';
 $(window).on('load', () => {
   $('.loader').fadeOut('slow');
 });
-// $(document).ready(() => {
-//  $('.loader').fadeOut('slow');
-// });
+
 
 // btn menu
 const btnportfolio = $('#navigation a.portfolio');
@@ -91,5 +89,4 @@ $('#btnContact').on('click', (e) => {
 
 
 // easter egg
-// changeLogoPika();
 createBtnPika();
